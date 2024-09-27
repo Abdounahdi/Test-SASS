@@ -1,0 +1,27 @@
+@use "sass:math";
+
+$breakpoints: (
+  "tablette": 1024px,
+  "tab-sm": 890px,
+  "mbl-hor": 653px,
+);
+
+@mixin tablette {
+  @media (max-width: map-get($breakpoints, "tablette")) {
+    @content;
+  }
+}
+
+@mixin tab-sm {
+  @media (max-width: map-get($breakpoints, "tab-sm")) {
+    @content;
+  }
+}
+
+@mixin mbl-hor {
+  @media (max-width: map-get($breakpoints, "mbl-hor")) {
+    @content;
+  }
+}
+
+/////////// 635px
