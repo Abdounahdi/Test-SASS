@@ -1,9 +1,5 @@
 @use "sass:math";
 
-body {
-  grid-template-columns: 17.4% 82.6%;
-}
-
 .h {
   height: 100%;
 }
@@ -18,6 +14,10 @@ body {
 .d-f {
   display: flex;
   align-items: center;
+}
+
+.space {
+  justify-content: space-between;
 }
 
 .d-f-c {
