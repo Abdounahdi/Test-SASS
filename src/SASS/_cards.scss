@@ -1,0 +1,418 @@
+
+////////////////
+//////// CARDS
+
+.cards-headings {
+  padding: $padding 0;
+  .card-header {
+    font-size: $fs-lg;
+    font-weight: 600;
+    line-height: 2.663rem;
+    color: $dark-pri;
+  }
+
+  .card-header-sm {
+    font-size: $fs-sm;
+    font-weight: 600;
+    line-height: 2.057rem;
+    color: $dark-pri;
+  }
+
+  @include tab-lg {
+    padding: 0;
+    padding-bottom: 1.6rem;
+    .card-header {
+      font-size: $fs-nm;
+    }
+
+    .card-header-sm {
+      font-size: $fs-sm - 0.1rem;
+    }
+  }
+
+  @include mbl-lg {
+    padding-bottom: 1.2rem;
+    .card-header {
+      font-size: $fs-sm;
+      position: relative;
+    }
+    .card-header-sm {
+      font-size: $fs-sm -0.2rem;
+      position: absolute;
+      right: 0;
+      transform: translateX(-20%);
+    }
+  }
+
+  /* @include mbl-lg {
+    justify-content: flex-start;
+    gap: 55%;
+    .card-header {
+      position: relative;
+      .card-header-sm {
+        position: absolute;
+        right: 0;
+      }
+    }
+  } */
+}
+
+.cards {
+  .colored-box-1 {
+    padding: $padding + 0.5rem $padding + 0.4rem 2.911rem $padding + 0.6rem;
+  }
+
+  .colored-box-2 {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: $padding + 0.5rem $padding + 0.4rem $padding $padding + 0.6rem;
+
+    .card-numb {
+      font-family: "Lato", sans-serif;
+      font-size: $fs-lg;
+      font-weight: 500;
+      line-height: 2.64rem;
+      color: white;
+    }
+  }
+
+  .card {
+    background: linear-gradient(to right bottom, #4c49ed, #0a06f4);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    border-radius: $b-r-nm;
+  }
+
+  .uncolored-card {
+    background-color: white;
+    border: solid $brd-white 1px;
+  }
+
+  .balance {
+    color: white;
+    font-family: "Lato", sans-serif;
+
+    .card-info-text-sm {
+      font-size: $fs-SM;
+      line-height: 1.44rem;
+    }
+    .card-info-text-bg {
+      font-size: $fs-nm + 0.2rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+    }
+  }
+
+  .card-hol {
+    color: white;
+    font-family: "Lato", sans-serif;
+
+    .cdi {
+      text-transform: uppercase;
+      font-size: $fs-SM;
+      line-height: 1.44rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .c-d-i {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.8rem;
+    }
+  }
+
+  .uncolor {
+    background-color: white;
+    .colored-box-2 {
+      border-top: solid 1px $brd-white;
+
+      .card-numb {
+        color: $dark-pri;
+      }
+    }
+
+    border: solid 1px $brd-white;
+    border-radius: $b-r-nm;
+
+    .balance {
+      color: $dark-pri;
+      .card-info-text-sm {
+        color: $heading-blue;
+      }
+    }
+
+    .card-hol {
+      color: $dark-pri;
+      .cdi {
+        color: $heading-blue;
+      }
+    }
+  }
+
+  @include tab-lg {
+    gap: 2.5rem;
+
+    .colored-box-1 {
+      padding: $padding - 0.2rem $padding $fs-sm $padding;
+      gap: 2.3rem;
+    }
+
+    .colored-box-2 {
+      padding: $padding - 0.4rem $padding $padding - 0.4rem $padding;
+
+      .card-numb {
+        font-size: $fs-sm - 0.1rem;
+      }
+    }
+
+    .balance {
+      .card-info-text-sm {
+        font-size: $fs-SM-sm;
+      }
+      .card-info-text-bg {
+        font-size: $fs-sm;
+        font-weight: 500;
+        line-height: 2.4rem;
+      }
+    }
+
+    .card-info-2 {
+      gap: 4rem;
+    }
+
+    .card-hol {
+      .cdi {
+        font-size: $fs-SM-sm;
+        line-height: 1.44rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .c-d-i {
+        font-size: $fs-SM;
+      }
+    }
+  }
+
+  @include tab {
+    gap: 1rem;
+    .card-info-2 {
+      gap: 3rem;
+    }
+
+    .colored-box-2 {
+      padding: $padding - 0.4rem $padding - 0.5rem;
+
+      .card-numb {
+        font-size: $fs-SM + 0.1rem;
+      }
+    }
+  }
+
+  @include mbl-lg {
+    position: relative;
+    .uncolor {
+      position: absolute;
+      transform: translateX(110%);
+    }
+
+    .colored-card {
+      width: 26.5rem;
+    }
+
+    .card-info-2 {
+      gap: 5.7rem;
+    }
+
+    .colored-box-2 {
+      padding: 1.6rem 1.7rem 1.65rem $padding;
+    }
+
+    .chip-card {
+      height: 2.9rem;
+    }
+
+    .master-card {
+      height: 1.8rem;
+      width: 2.7rem;
+    }
+  }
+
+  
+}
+
+@include mbl-lg {
+  .scroll {
+    overflow: scroll;
+  }
+}
+
+////////////////
+//////// EXPENSES
+
+.card-3 {
+  padding: 2.5rem 2.8rem 2.8rem 2.5rem;
+  background-color: white;
+  border-radius: $b-r-nm;
+  justify-content: center;
+
+  .expences-container {
+    align-items: flex-end;
+    gap: 0.5rem;
+    .month-expenses {
+      align-items: center;
+
+      .month {
+        color: $heading-blue;
+      }
+    }
+
+    .rectangle {
+      background-color: $light-main;
+      border-radius: $b-r-sm;
+    }
+
+    .r--aug {
+      padding: 4.65rem 1.85rem;
+    }
+    .r--sep {
+      padding: 7.1rem 1.85rem;
+    }
+    .r--oct {
+      padding: 4.8rem 1.85rem;
+    }
+    .r--nov {
+      padding: 2.45rem 1.85rem;
+    }
+    .r--dec {
+      padding: 6.45rem 1.85rem;
+      box-shadow: 0px 0px 35px 0px #12887e33;
+      background-color: $green-expenses;
+    }
+    .r--jan {
+      padding: 4.4rem 1.85rem;
+    }
+
+    .expences-rel {
+      position: relative;
+      .expences-money {
+        font-size: $fs-sm - 0.2rem;
+        font-weight: 500;
+        line-height: 1.694rem;
+        color: $dark-pri;
+
+        position: absolute;
+        top: 0;
+        transform: translateY(-140%);
+      }
+    }
+  }
+
+  @include tab-lg {
+    padding: 3rem 1.8rem 2rem 1.8rem;
+    gap: 1.2rem;
+
+    .expences-container {
+      gap: 1.2rem;
+
+      .r--aug {
+        padding: 3.45rem 1.1rem;
+      }
+      .r--sep {
+        padding: 5.55rem 1.1rem;
+      }
+      .r--oct {
+        padding: 3.7rem 1.1rem;
+      }
+      .r--nov {
+        padding: 1.95rem 1.1rem;
+      }
+      .r--dec {
+        padding: 4.95rem 1.1rem;
+        box-shadow: 0px 0px 35px 0px #12887e33;
+        background-color: $green-expenses;
+      }
+      .r--jan {
+        padding: 3.25rem 1rem;
+      }
+      .month-expenses {
+        .expences-money {
+          font-size: $fs-SM;
+        }
+      }
+    }
+  }
+
+  @include tab {
+    padding: 3rem 1.2rem 2rem 1.2rem;
+
+    .expences-container {
+      gap: 1rem;
+    }
+  }
+
+  @include tab-ver {
+    padding: 3rem 2rem 2rem 2rem;
+    .expences-container {
+      .r--aug {
+        padding: 3.45rem 2.5rem;
+      }
+      .r--sep {
+        padding: 5.55rem 2.5rem;
+      }
+      .r--oct {
+        padding: 3.7rem 2.5rem;
+      }
+      .r--nov {
+        padding: 1.95rem 2.5rem;
+      }
+      .r--dec {
+        padding: 4.95rem 2.5rem;
+        box-shadow: 0px 0px 35px 0px #12887e33;
+        background-color: $green-expenses;
+      }
+      .r--jan {
+        padding: 3.25rem 2.5rem;
+      }
+      .month-expenses {
+        .expences-money {
+          font-size: $fs-sm;
+        }
+      }
+    }
+  }
+
+  @include mbl-lg {
+    padding: 2.8rem $padding $padding $padding;
+    .expences-container {
+      gap: 0.7rem;
+
+      .r--aug {
+        padding: 4.65rem 1.75rem;
+      }
+      .r--sep {
+        padding: 7.1rem 1.75rem;
+      }
+      .r--oct {
+        padding: 4.8rem 1.75rem;
+      }
+      .r--nov {
+        padding: 2.45rem 1.75rem;
+      }
+      .r--dec {
+        padding: 6.54rem 1.75rem;
+        box-shadow: 0px 0px 35px 0px #12887e33;
+        background-color: $green-expenses;
+      }
+      .r--jan {
+        padding: 4.4rem 1.75rem;
+      }
+      .month-expenses {
+        .expences-money {
+          font-size: $fs-SM;
+        }
+      }
+    }
+  }
+}

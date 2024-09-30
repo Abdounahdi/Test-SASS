@@ -9,6 +9,7 @@ $breakpoints: (
   "mbl-hor": 653px,
   "mbl-lg": 480px,
   "mbl": 375px,
+  "mbl-sm":335px,
 );
 
 @mixin tab-lg {
@@ -59,4 +60,12 @@ $breakpoints: (
   }
 }
 
-/////////// 635px
+
+/////////// NOT USED YET 
+@mixin mbl-sm {
+  @media (max-width: map-get($breakpoints, "mbl-sm")) {
+    @content;
+  }
+}
+
+
