@@ -1031,6 +1031,7 @@ body {
 }
 .transactions-section .transactions-menu .tran-link:link,
 .transactions-section .transactions-menu .tran-link:visited {
+  text-wrap: nowrap;
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-size: 1.3rem;
@@ -1207,14 +1208,16 @@ body {
   line-height: 1.815rem;
   color: #1814f3;
 }
-.pages-nav .pages-numb, .pages-nav .opened {
+.pages-nav .pages-numb,
+.pages-nav .opened {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.815rem;
   color: white;
 }
-.pages-nav .pages-numb:link, .pages-nav .pages-numb:visited {
+.pages-nav .pages-numb:link,
+.pages-nav .pages-numb:visited {
   color: #1814f3;
   transition: all 0.4s;
 }
@@ -1224,7 +1227,8 @@ body {
   background-color: #1814f3;
   border-radius: 1rem;
 }
-.pages-nav .opened:link, .pages-nav .oponed:visited {
+.pages-nav .opened:link,
+.pages-nav .oponed:visited {
   color: white;
   padding: 1.1rem 1.6rem;
   background-color: #1814f3;
@@ -1238,10 +1242,12 @@ body {
   .pages-nav .pages-text {
     font-size: 1.2rem;
   }
-  .pages-nav .pages-numb, .pages-nav .opened {
+  .pages-nav .pages-numb,
+  .pages-nav .opened {
     font-size: 1.2rem;
   }
-  .pages-nav .opened:link, .pages-nav .oponed:visited {
+  .pages-nav .opened:link,
+  .pages-nav .oponed:visited {
     padding: 0.7rem 1.2rem;
   }
 }
