@@ -17,4 +17,148 @@
 @import "menu-nav";
 @import "cards";
 
+///////////////////////////
+/// TRANSACTIONS SECTION
 
+.transactions-section {
+  grid-column: 1/-1;
+
+  .transactions-menu {
+    border-bottom: solid $brd-tran 1px;
+    padding: 0 $padding / 2 0.8rem $padding;
+    overflow: hidden;
+    margin-bottom: $padding;
+
+    .tran-link:link,
+    .tran-link:visited {
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-size: $fs-SM + 0.1rem;
+      font-weight: 500;
+      line-height: 1.573rem;
+    }
+
+    .unchecked-link:link,
+    .unchecked-link:visited {
+      color: $heading-blue;
+    }
+
+    .unchecked-link:hover,
+    .unchecked-link:active {
+      color: $primary-light;
+    }
+
+    .checked-link:link,
+    .checked-link:visited {
+      color: $primary-light;
+    }
+
+    .checked-link {
+      position: relative;
+      .indicator {
+        position: absolute;
+        transform: translate(-9%, 23%);
+        width: 120%;
+        height: 100%;
+        background-color: $primary-light;
+        border-radius: $b-r-sm;
+      }
+    }
+  }
+
+  .tran-inner {
+    background-color: white;
+    border-radius: $b-r-av;
+    padding: $padding + 0.2rem $padding * 1.5 $padding * 1.5 $padding * 1.5;
+  }
+
+  .tran-table {
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    border-collapse: collapse;
+
+    td {
+      padding-bottom: 0.75rem;
+      padding-top: 0.75rem;
+      border-bottom: solid $brd-tran 1px;
+    }
+
+    .table-head {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.452rem;
+      color: $heading-blue;
+    }
+
+    .table-body {
+      .tab-data {
+        font-size: $fs-sm;
+        line-height: 1.936rem;
+        gap: 1.4rem;
+
+        .tran-svg {
+          height: 3rem;
+        }
+
+        .tab-btn {
+          background-color: white;
+          border-radius: $b-r-lg + $b-r-sm;
+          padding: 0.8rem 1.4rem;
+          border: solid $primary 1px;
+          font-size: $fs-sm;
+          line-height: 1.815rem;
+          color: $primary;
+        }
+      }
+
+      .lost {
+        color: $accent;
+      }
+
+      .won {
+        color: $green-expenses;
+      }
+    }
+
+    .unborder td {
+      border: none;
+    }
+  }
+
+  @include tab-l {
+    .tran-inner {
+      padding: 1.7rem $padding 1.5rem $padding;
+    }
+
+    .tran-table {
+      font-family: "Inter", sans-serif;
+      align-items: center;
+      border-collapse: collapse;
+
+      td {
+        padding-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        border-bottom: solid $brd-tran 1px;
+      }
+
+      .table-head {
+        font-size: $fs-SM;
+      }
+
+      .table-body {
+        .tab-data {
+          font-size: $fs-SM;
+
+          .tran-svg {
+            height: 2rem;
+          }
+
+          .tab-btn {
+            padding: 0.7rem 1.1rem;
+            font-size: $fs-SM;
+          }
+        }
+      }
+    }
+  }
+}

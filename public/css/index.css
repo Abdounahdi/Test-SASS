@@ -6,6 +6,12 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
+}
+@media (max-height: 1000px) {
+  html {
+    height: auto !important;
+  }
 }
 
 body {
@@ -33,6 +39,10 @@ body {
 
 .space {
   justify-content: space-between;
+}
+
+.f-start {
+  align-items: flex-start;
 }
 
 .d-f-c {
@@ -328,6 +338,7 @@ body {
   background-color: #f5f7fa;
   padding: 2.5rem 4rem;
   grid-template-columns: 66.4% 31.8%;
+  grid-template-rows: min-content;
 }
 @media (max-width: 1300px) {
   .main-inner {
@@ -1001,6 +1012,122 @@ body {
     padding: 4.4rem 1.75rem;
   }
   .card-3 .expences-container .month-expenses .expences-money {
+    font-size: 1.2rem;
+  }
+}
+
+.transactions-section {
+  grid-column: 1/-1;
+}
+.transactions-section .transactions-menu {
+  border-bottom: solid #ebeef2 1px;
+  padding: 0 1rem 0.8rem 2rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.transactions-section .transactions-menu .tran-link:link,
+.transactions-section .transactions-menu .tran-link:visited {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.573rem;
+}
+.transactions-section .transactions-menu .unchecked-link:link,
+.transactions-section .transactions-menu .unchecked-link:visited {
+  color: #718ebf;
+}
+.transactions-section .transactions-menu .unchecked-link:hover,
+.transactions-section .transactions-menu .unchecked-link:active {
+  color: #1814f3;
+}
+.transactions-section .transactions-menu .checked-link:link,
+.transactions-section .transactions-menu .checked-link:visited {
+  color: #1814f3;
+}
+.transactions-section .transactions-menu .checked-link {
+  position: relative;
+}
+.transactions-section .transactions-menu .checked-link .indicator {
+  position: absolute;
+  transform: translate(-9%, 23%);
+  width: 120%;
+  height: 100%;
+  background-color: #1814f3;
+  border-radius: 1rem;
+}
+.transactions-section .tran-inner {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2.2rem 3rem 3rem 3rem;
+}
+.transactions-section .tran-table {
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  border-collapse: collapse;
+}
+.transactions-section .tran-table td {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  border-bottom: solid #ebeef2 1px;
+}
+.transactions-section .tran-table .table-head {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.452rem;
+  color: #718ebf;
+}
+.transactions-section .tran-table .table-body .tab-data {
+  font-size: 1.6rem;
+  line-height: 1.936rem;
+  gap: 1.4rem;
+}
+.transactions-section .tran-table .table-body .tab-data .tran-svg {
+  height: 3rem;
+}
+.transactions-section .tran-table .table-body .tab-data .tab-btn {
+  background-color: white;
+  border-radius: 41rem;
+  padding: 0.8rem 1.4rem;
+  border: solid #123288 1px;
+  font-size: 1.6rem;
+  line-height: 1.815rem;
+  color: #123288;
+}
+.transactions-section .tran-table .table-body .lost {
+  color: #fe5c73;
+}
+.transactions-section .tran-table .table-body .won {
+  color: #16dbcc;
+}
+.transactions-section .tran-table .unborder td {
+  border: none;
+}
+@media (max-width: 1160px) {
+  .transactions-section .tran-inner {
+    padding: 1.7rem 2rem 1.5rem 2rem;
+  }
+  .transactions-section .tran-table {
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    border-collapse: collapse;
+  }
+  .transactions-section .tran-table td {
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    border-bottom: solid #ebeef2 1px;
+  }
+  .transactions-section .tran-table .table-head {
+    font-size: 1.2rem;
+  }
+  .transactions-section .tran-table .table-body .tab-data {
+    font-size: 1.2rem;
+  }
+  .transactions-section .tran-table .table-body .tab-data .tran-svg {
+    height: 2rem;
+  }
+  .transactions-section .tran-table .table-body .tab-data .tab-btn {
+    padding: 0.7rem 1.1rem;
     font-size: 1.2rem;
   }
 }
