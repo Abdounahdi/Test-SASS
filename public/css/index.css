@@ -360,7 +360,7 @@ body {
     gap: 3.5rem;
   }
 }
-@media (max-width: 890px) {
+@media (max-width: 902px) {
   .menu {
     padding: 2.5rem 1.5rem 0 1.3rem;
     gap: 3.6rem;
@@ -404,7 +404,7 @@ body {
     transform: translate(-200%, 230%);
   }
 }
-@media (max-width: 890px) {
+@media (max-width: 902px) {
   .opened-page {
     height: 3rem;
     transform: translate(-133%, 377%);
@@ -526,7 +526,7 @@ body {
     gap: 2rem;
   }
 }
-@media (max-width: 890px) {
+@media (max-width: 902px) {
   .nav {
     padding: 1.5rem 2.5rem;
   }
@@ -621,9 +621,44 @@ body {
   padding: 2.5rem 4rem;
   grid-template-columns: 66.4% 31.8%;
 }
+@media (max-width: 1300px) {
+  .main-inner {
+    padding: 2rem 2.5rem;
+  }
+}
+@media (max-width: 976px) {
+  .main-inner {
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 819px) {
+  .main-inner {
+    padding: 2.5rem 3rem;
+    grid-template-columns: 1fr;
+    align-content: baseline;
+    gap: 2.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .main-inner {
+    padding: 2.2rem 2.5rem 2.5rem 2.5rem;
+  }
+}
 
 .cards-headings {
   padding: 2rem 0;
+  /* @include mbl-lg {
+    justify-content: flex-start;
+    gap: 55%;
+    .card-header {
+      position: relative;
+      .card-header-sm {
+        position: absolute;
+        right: 0;
+      }
+    }
+  } */
 }
 .cards-headings .card-header {
   font-size: 2.2rem;
@@ -639,13 +674,29 @@ body {
 }
 @media (max-width: 1300px) {
   .cards-headings {
-    padding: 1.6rem;
+    padding: 0;
+    padding-bottom: 1.6rem;
   }
   .cards-headings .card-header {
     font-size: 1.8rem;
   }
   .cards-headings .card-header-sm {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .cards-headings {
+    padding-bottom: 1.2rem;
+  }
+  .cards-headings .card-header {
+    font-size: 1.6rem;
+    position: relative;
+  }
+  .cards-headings .card-header-sm {
+    font-size: 1.6rem -0.2rem;
+    position: absolute;
+    right: 0;
+    transform: translateX(-20%);
   }
 }
 
@@ -724,8 +775,12 @@ body {
   color: #718ebf;
 }
 @media (max-width: 1300px) {
+  .cards {
+    gap: 2.5rem;
+  }
   .cards .colored-box-1 {
     padding: 1.8rem 2rem 1.6rem 2rem;
+    gap: 2.3rem;
   }
   .cards .colored-box-2 {
     padding: 1.6rem 2rem 1.6rem 2rem;
@@ -741,8 +796,63 @@ body {
     font-weight: 500;
     line-height: 2.4rem;
   }
+  .cards .card-info-2 {
+    gap: 4rem;
+  }
+  .cards .card-hol .cdi {
+    font-size: 1rem;
+    line-height: 1.44rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .cards .card-hol .c-d-i {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 976px) {
+  .cards {
+    gap: 1rem;
+  }
+  .cards .card-info-2 {
+    gap: 3rem;
+  }
+  .cards .colored-box-2 {
+    padding: 1.6rem 1.5rem;
+  }
+  .cards .colored-box-2 .card-numb {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .cards {
+    position: relative;
+  }
+  .cards .uncolor {
+    position: absolute;
+    transform: translateX(120%);
+  }
+  .cards .colored-card {
+    width: 26.5rem;
+  }
+  .cards .card-info-2 {
+    gap: 5.7rem;
+  }
+  .cards .colored-box-2 {
+    padding: 1.6rem 1.7rem 1.65rem 2rem;
+  }
+  .cards .chip-card {
+    height: 2.9rem;
+  }
+  .cards .master-card {
+    height: 1.8rem;
+    width: 2.7rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .scroll {
+    overflow: scroll;
+  }
+}
 .card-3 {
   padding: 2.5rem 2.8rem 2.8rem 2.5rem;
   background-color: white;
@@ -755,6 +865,9 @@ body {
 }
 .card-3 .expences-container .month-expenses {
   align-items: center;
+}
+.card-3 .expences-container .month-expenses .month {
+  color: #718ebf;
 }
 .card-3 .expences-container .rectangle {
   background-color: #edf0f7;
@@ -794,7 +907,7 @@ body {
 }
 @media (max-width: 1300px) {
   .card-3 {
-    padding: 1.7rem 1.8rem 1.5rem 1.8rem;
+    padding: 3rem 1.8rem 2rem 1.8rem;
     gap: 1.2rem;
   }
   .card-3 .expences-container {
@@ -822,6 +935,72 @@ body {
   }
   .card-3 .expences-container .month-expenses .expences-money {
     font-size: 1.2rem;
-    transform: translateY(-100%);
+  }
+}
+@media (max-width: 976px) {
+  .card-3 {
+    padding: 3rem 1.2rem 2rem 1.2rem;
+  }
+  .card-3 .expences-container {
+    gap: 1rem;
+  }
+}
+@media (max-width: 819px) {
+  .card-3 {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+  .card-3 .expences-container .r--aug {
+    padding: 3.45rem 2.5rem;
+  }
+  .card-3 .expences-container .r--sep {
+    padding: 5.55rem 2.5rem;
+  }
+  .card-3 .expences-container .r--oct {
+    padding: 3.7rem 2.5rem;
+  }
+  .card-3 .expences-container .r--nov {
+    padding: 1.95rem 2.5rem;
+  }
+  .card-3 .expences-container .r--dec {
+    padding: 4.95rem 2.5rem;
+    box-shadow: 0px 0px 35px 0px rgba(18, 136, 126, 0.2);
+    background-color: #16dbcc;
+  }
+  .card-3 .expences-container .r--jan {
+    padding: 3.25rem 2.5rem;
+  }
+  .card-3 .expences-container .month-expenses .expences-money {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .card-3 {
+    padding: 2.8rem 2rem 2rem 2rem;
+  }
+  .card-3 .expences-container {
+    gap: 0.7rem;
+  }
+  .card-3 .expences-container .r--aug {
+    padding: 4.65rem 1.75rem;
+  }
+  .card-3 .expences-container .r--sep {
+    padding: 7.1rem 1.75rem;
+  }
+  .card-3 .expences-container .r--oct {
+    padding: 4.8rem 1.75rem;
+  }
+  .card-3 .expences-container .r--nov {
+    padding: 2.45rem 1.75rem;
+  }
+  .card-3 .expences-container .r--dec {
+    padding: 6.54rem 1.75rem;
+    box-shadow: 0px 0px 35px 0px rgba(18, 136, 126, 0.2);
+    background-color: #16dbcc;
+  }
+  .card-3 .expences-container .r--jan {
+    padding: 4.4rem 1.75rem;
+  }
+  .card-3 .expences-container .month-expenses .expences-money {
+    font-size: 1.2rem;
   }
 }

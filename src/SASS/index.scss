@@ -366,6 +366,26 @@
   background-color: $main;
   padding: $padding + 0.5rem $padding * 2;
   grid-template-columns: 66.4% 31.8%;
+
+  @include tab-lg {
+    padding: $padding $padding + 0.5rem;
+  }
+
+  @include tab {
+    padding: $padding $padding - 0.5rem;
+    gap: 1rem;
+  }
+
+  @include tab-ver {
+    padding: $padding + 0.5rem $padding * 1.5;
+    grid-template-columns: 1fr;
+    align-content: baseline;
+    gap: 2.2rem;
+  }
+
+  @include mbl-lg {
+    padding: 2.2rem 2.5rem 2.5rem 2.5rem;
+  }
 }
 
 ////////////////
@@ -388,7 +408,8 @@
   }
 
   @include tab-lg {
-    padding: $padding - 0.4rem;
+    padding: 0;
+    padding-bottom: 1.6rem;
     .card-header {
       font-size: $fs-nm;
     }
@@ -397,6 +418,32 @@
       font-size: $fs-sm - 0.1rem;
     }
   }
+
+  @include mbl-lg {
+    padding-bottom: 1.2rem;
+    .card-header {
+      font-size: $fs-sm;
+      position: relative;
+    }
+    .card-header-sm {
+      font-size: $fs-sm -0.2rem;
+      position: absolute;
+      right: 0;
+      transform: translateX(-20%);
+    }
+  }
+
+  /* @include mbl-lg {
+    justify-content: flex-start;
+    gap: 55%;
+    .card-header {
+      position: relative;
+      .card-header-sm {
+        position: absolute;
+        right: 0;
+      }
+    }
+  } */
 }
 
 .cards {
@@ -447,8 +494,6 @@
     }
   }
 
-  ///////////////
-
   .card-hol {
     color: white;
     font-family: "Lato", sans-serif;
@@ -496,8 +541,11 @@
   }
 
   @include tab-lg {
+    gap: 2.5rem;
+
     .colored-box-1 {
       padding: $padding - 0.2rem $padding $fs-sm $padding;
+      gap: 2.3rem;
     }
 
     .colored-box-2 {
@@ -518,6 +566,72 @@
         line-height: 2.4rem;
       }
     }
+
+    .card-info-2 {
+      gap: 4rem;
+    }
+
+    .card-hol {
+      .cdi {
+        font-size: $fs-SM-sm;
+        line-height: 1.44rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .c-d-i {
+        font-size: $fs-SM;
+      }
+    }
+  }
+
+  @include tab {
+    gap: 1rem;
+    .card-info-2 {
+      gap: 3rem;
+    }
+
+    .colored-box-2 {
+      padding: $padding - 0.4rem $padding - 0.5rem;
+
+      .card-numb {
+        font-size: $fs-SM + 0.1rem;
+      }
+    }
+  }
+
+  @include mbl-lg {
+    position: relative;
+    .uncolor {
+      position: absolute;
+      transform: translateX(120%);
+    }
+
+    .colored-card {
+      width: 26.5rem;
+    }
+
+    .card-info-2 {
+      gap: 5.7rem;
+    }
+
+    .colored-box-2 {
+      padding: 1.6rem 1.7rem 1.65rem $padding;
+    }
+
+    .chip-card {
+      height: 2.9rem;
+    }
+
+    .master-card {
+      height: 1.8rem;
+      width: 2.7rem;
+    }
+  }
+}
+
+@include mbl-lg {
+  .scroll {
+    overflow: scroll;
   }
 }
 
@@ -535,6 +649,10 @@
     gap: 0.5rem;
     .month-expenses {
       align-items: center;
+
+      .month {
+        color: $heading-blue;
+      }
     }
 
     .rectangle {
@@ -579,7 +697,7 @@
   }
 
   @include tab-lg {
-    padding: 1.7rem 1.8rem 1.5rem 1.8rem;
+    padding: 3rem 1.8rem 2rem 1.8rem;
     gap: 1.2rem;
 
     .expences-container {
@@ -608,7 +726,78 @@
       .month-expenses {
         .expences-money {
           font-size: $fs-SM;
-          transform: translateY(-100%);
+        }
+      }
+    }
+  }
+
+  @include tab {
+    padding: 3rem 1.2rem 2rem 1.2rem;
+
+    .expences-container {
+      gap: 1rem;
+    }
+  }
+
+  @include tab-ver {
+    padding: 3rem 2rem 2rem 2rem;
+    .expences-container {
+      .r--aug {
+        padding: 3.45rem 2.5rem;
+      }
+      .r--sep {
+        padding: 5.55rem 2.5rem;
+      }
+      .r--oct {
+        padding: 3.7rem 2.5rem;
+      }
+      .r--nov {
+        padding: 1.95rem 2.5rem;
+      }
+      .r--dec {
+        padding: 4.95rem 2.5rem;
+        box-shadow: 0px 0px 35px 0px #12887e33;
+        background-color: $green-expenses;
+      }
+      .r--jan {
+        padding: 3.25rem 2.5rem;
+      }
+      .month-expenses {
+        .expences-money {
+          font-size: $fs-sm;
+        }
+      }
+    }
+  }
+
+  @include mbl-lg {
+    padding: 2.8rem $padding $padding $padding;
+    .expences-container {
+      gap: 0.7rem;
+
+      .r--aug {
+        padding: 4.65rem 1.75rem;
+      }
+      .r--sep {
+        padding: 7.1rem 1.75rem;
+      }
+      .r--oct {
+        padding: 4.8rem 1.75rem;
+      }
+      .r--nov {
+        padding: 2.45rem 1.75rem;
+      }
+      .r--dec {
+        padding: 6.54rem 1.75rem;
+        box-shadow: 0px 0px 35px 0px #12887e33;
+        background-color: $green-expenses;
+      }
+      .r--jan {
+        padding: 4.4rem 1.75rem;
+      }
+      .month-expenses {
+        .expences-money {
+          font-size: $fs-SM;
         }
       }
     }

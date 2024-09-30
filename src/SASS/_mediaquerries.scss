@@ -3,8 +3,11 @@
 $breakpoints: (
   "tab-lg": 1300px,
   "tablette": 1024px,
-  "tab-sm": 890px,
+  "tab": 976px,
+  "tab-sm": 902px,
+  "tab-ver": 819px,
   "mbl-hor": 653px,
+  "mbl-lg": 480px,
   "mbl": 375px,
 );
 
@@ -20,6 +23,18 @@ $breakpoints: (
   }
 }
 
+@mixin tab {
+  @media (max-width: map-get($breakpoints, "tab")) {
+    @content;
+  }
+}
+
+@mixin tab-ver {
+  @media (max-width: map-get($breakpoints, "tab-ver")) {
+    @content;
+  }
+}
+
 @mixin tab-sm {
   @media (max-width: map-get($breakpoints, "tab-sm")) {
     @content;
@@ -28,6 +43,12 @@ $breakpoints: (
 
 @mixin mbl-hor {
   @media (max-width: map-get($breakpoints, "mbl-hor")) {
+    @content;
+  }
+}
+
+@mixin mbl-lg {
+  @media (max-width: map-get($breakpoints, "mbl-lg")) {
     @content;
   }
 }
