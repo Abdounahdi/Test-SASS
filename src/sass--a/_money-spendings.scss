@@ -1,0 +1,105 @@
+////////// MONEY GOES
+//
+
+.money-goes {
+  grid-column: 1/-1;
+  justify-content: space-between;
+  padding-bottom: $padding;
+
+  .money-card {
+    padding: $padding + 0.5rem $padding * 1.8;
+    background-color: white;
+    border-radius: $b-r-av;
+
+    svg {
+      height: 7rem;
+      width: 7rem;
+    }
+
+    .money-goes-text {
+      font-family: "Inter", sans-serif;
+
+      .money-type {
+        text-wrap: nowrap;
+        font-size: $fs-sm;
+        line-height: 1.936rem;
+        color: $heading-blue;
+      }
+
+      .dollars {
+        font-size: $fs-LG - 0.3rem;
+        font-weight: 600;
+        line-height: 3.026rem;
+      }
+    }
+  }
+
+  @include tab-lg {
+    .money-card {
+      padding: $padding $padding + 1rem;
+
+      svg {
+        height: 5rem;
+        width: 5rem;
+      }
+
+      .money-goes-text {
+        .money-type {
+          font-size: $fs-SM;
+        }
+
+        .dollars {
+          font-size: $fs-sm;
+        }
+      }
+    }
+  }
+
+  @include tab-l {
+    .money-card {
+      padding: $padding;
+    }
+  }
+
+  @include tab-ver {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mbl-lg {
+    gap: 1.5rem;
+    padding: 0;
+
+    .money-card {
+      padding: $padding $padding - 0.3rem;
+
+      svg {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      .money-goes-text {
+        .money-type {
+          font-size: $fs-SM;
+        }
+
+        .dollars {
+          font-size: $fs-sm;
+        }
+      }
+    }
+  }
+
+  @include mbl {
+    grid-template-columns: 1fr;
+
+    .money-card {
+      width: 100%;
+      justify-content: space-between;
+
+      .money-goes-text {
+        width: 7rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  @media (max-height: 882px) {
+    height: auto !important;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  color: $black;
+}
+

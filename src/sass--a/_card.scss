@@ -1,0 +1,85 @@
+.my-card {
+  display: none;
+
+  @include tablette {
+    display: block;
+  }
+  .colored-box-1 {
+    padding: 1.7rem $padding;
+    gap: 2.3rem;
+
+    .chip-card {
+      height: 2.9rem;
+    }
+  }
+
+  .colored-box-2 {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 1.6rem $padding;
+
+    .card-numb {
+      font-family: "Lato", sans-serif;
+      font-size: $fs-sm - 0.1rem;
+      font-weight: 500;
+      line-height: 2.64rem;
+      color: white;
+    }
+
+    .master-card {
+      height: 1.9rem;
+      width: 2.7rem;
+    }
+  }
+
+  .card {
+    background: linear-gradient(107.38deg, #2d60ff 2.61%, #539bff 101.2%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    border-radius: $b-r-nm;
+  }
+
+  .uncolored-card {
+    background-color: white;
+    border: solid $brd-white 1px;
+  }
+
+  .balance {
+    color: white;
+    font-family: "Lato", sans-serif;
+
+    .card-info-text-sm {
+      font-size: $fs-SM - 0.1rem;
+      line-height: 1.44rem;
+    }
+    .card-info-text-bg {
+      font-size: $fs-SM + 0.1rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+    }
+  }
+
+  .card-hol {
+    color: white;
+    font-family: "Lato", sans-serif;
+
+    .cdi {
+      text-transform: uppercase;
+      font-size: $fs-SM - 0.2rem;
+      line-height: 1.44rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .c-d-i {
+      font-size: $fs-SM + 0.1rem;
+      font-weight: 500;
+      line-height: 1.8rem;
+    }
+  }
+
+  .card-info-2 {
+    gap: 4rem;
+  }
+}

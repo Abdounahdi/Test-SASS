@@ -1,0 +1,220 @@
+// variables
+@import "variables";
+
+//generals
+@import "generals";
+
+// layouts
+@import "layouts";
+
+/// // MEDIA QUERRIES
+
+@import "mediaquerries";
+
+/// COMPONENTS
+
+@import "menu-nav";
+@import "main-maininner";
+@import "card";
+@import "money-spendings";
+
+////////////// TRANSACTIONS
+///
+
+.headings {
+  padding-bottom: $padding;
+  @include tablette {
+    padding-bottom: $padding - 0.4rem;
+  }
+
+  .heading {
+    font-size: $fs-lg;
+    font-weight: 600;
+    line-height: 2.663rem;
+    color: $dark-pri;
+  }
+
+  @include tablette {
+    .heading {
+      font-size: $fs-sm;
+    }
+  }
+  @include mbl-lg {
+    padding: 0 0 1.2rem 0;
+  }
+}
+
+.tran-preview-section {
+  .tran-table {
+    border-collapse: collapse;
+    padding: $padding + 0.5rem;
+    background-color: white;
+    border-radius: $b-r-nm;
+
+    td {
+      padding-bottom: 1rem;
+    }
+
+    font-family: "Inter", sans-serif;
+
+    .tran-svg {
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+
+    .tran-title {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.93rem;
+      color: $black;
+    }
+
+    .tran-details {
+      font-size: $fs-sm - 0.1rem;
+      line-height: 1.815rem;
+      color: $heading-blue;
+    }
+    @include tablette {
+      padding: 1.5rem 1.8rem 0 1.8rem;
+    }
+
+    @include tablette {
+      .tran-svg {
+        height: 4%;
+        width: 4rem;
+      }
+
+      .tran-title {
+        font-size: $fs-SM;
+      }
+
+      .tran-details {
+        font-size: $fs-SM;
+      }
+    }
+  }
+
+  .lost {
+    color: $accent !important;
+  }
+
+  .won {
+    color: $green-expenses !important;
+  }
+
+  @include mbl-LG {
+    .disapear-1 {
+      display: none;
+    }
+  }
+
+  @include mbl-lg {
+    .disapear-2 {
+      display: none;
+    }
+
+    .tran-table {
+      padding: $padding;
+
+      td {
+        padding: 0.6rem 0;
+      }
+
+      .tran-svg {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      .tran-title {
+        font-size: $fs-sm - 0.2rem;
+      }
+
+      .tran-details {
+        font-size: $fs-SM;
+      }
+    }
+  }
+  @include mbl-sm {
+    .disapear-3 {
+      display: none;
+    }
+  }
+}
+
+////////////// TRANSACTIONS
+///
+
+.invoice-sent-section {
+  font-family: "Inter", sans-serif;
+
+  .invoices-container {
+    background-color: white;
+    padding: 1.5rem 3.1rem 2.6rem 2.5rem;
+    border-radius: $b-r-nm;
+  }
+
+  .invoice-info {
+    /* position: relative; */
+
+    position: relative;
+    .invoice-icon {
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .icon-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      position: absolute;
+      left: 0;
+      transform: translate(70%, -5%);
+    }
+    .invoice-text {
+      .invoice-name {
+        font-size: $fs-sm;
+        font-weight: 500;
+        line-height: 1.93rem;
+        color: $grey;
+      }
+      .invoice-time {
+        font-size: $fs-sm;
+        line-height: 1.936rem;
+        color: $heading-blue;
+      }
+    }
+  }
+
+  .invoice-money {
+    font-size: $fs-sm;
+    line-height: 1.936rem;
+    color: $heading-blue;
+  }
+
+  @include tab-l {
+    .invoices-container {
+      padding: $padding;
+    }
+    .invoice-info {
+      .invoice-icon {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      .icon-icon {
+        height: 1.8rem;
+        width: 1.8rem;
+      }
+      .invoice-text {
+        .invoice-name {
+          font-size: $fs-SM;
+        }
+      }
+    }
+  }
+
+  @include tablette {
+    .disapear-0 {
+      display: none;
+    }
+  }
+}
