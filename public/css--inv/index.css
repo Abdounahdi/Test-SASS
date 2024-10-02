@@ -329,6 +329,31 @@ body {
   gap: 70px;
 }
 
+.headings {
+  padding-bottom: 2rem;
+}
+@media (max-width: 1024px) {
+  .headings {
+    padding-bottom: 1.6rem;
+  }
+}
+.headings .heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 2.663rem;
+  color: #343c6a;
+}
+@media (max-width: 1024px) {
+  .headings .heading {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .headings {
+    padding: 0 0 1.2rem 0;
+  }
+}
+
 .menu {
   padding: 3.3rem 2.5rem 0 4.1rem;
   position: relative;
@@ -771,4 +796,15 @@ body {
   .money-goes {
     display: none;
   }
+}
+.charts-container {
+  grid-template-columns: 1fr 1fr;
+}
+.charts-container .chart .chart-img-container {
+  padding: 2.6rem 3rem 2.8rem 2.9rem;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+.charts-container .chart .chart-img-container img {
+  width: 100%;
 }

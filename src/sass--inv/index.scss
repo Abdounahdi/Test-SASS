@@ -4,15 +4,38 @@
 //generals
 @import "generals";
 
-// layouts
-@import "layouts";
 
 /// // MEDIA QUERRIES
 
 @import "mediaquerries";
+
+// layouts
+@import "layouts";
 
 /// COMPONENTS
 
 @import "menu-nav";
 @import "main-maininner";
 @import "money-spendings";
+
+
+
+
+
+///////// CHARTS
+/// 
+
+.charts-container{
+  grid-template-columns: 1fr 1fr;
+  .chart {
+    .chart-img-container{
+      padding: 2.6rem 3rem 2.8rem 2.9rem;
+      background-color: white;
+      border-radius: $b-r-nm;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
