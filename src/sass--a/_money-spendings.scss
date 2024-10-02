@@ -61,9 +61,16 @@
     }
   }
 
+  @include tab {
+    .money-card {
+      padding: $padding $padding - 0.5rem;
+    }
+  }
+
   @include tab-ver {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   @include mbl-lg {
@@ -71,8 +78,6 @@
     padding: 0;
 
     .money-card {
-      padding: $padding $padding - 0.3rem;
-
       svg {
         height: 4.5rem;
         width: 4.5rem;
@@ -91,8 +96,6 @@
   }
 
   @include mbl {
-    grid-template-columns: 1fr;
-
     .money-card {
       width: 100%;
       justify-content: space-between;
@@ -100,6 +103,14 @@
       .money-goes-text {
         width: 7rem;
       }
+    }
+  }
+
+  @include mbl-s {
+    grid-template-columns: 1fr;
+
+    .money-card {
+      justify-content: space-around;
     }
   }
 }

@@ -82,4 +82,70 @@
   .card-info-2 {
     gap: 4rem;
   }
+
+  @include tab {
+    .colored-box-1 {
+      padding: 1.7rem;
+    }
+
+    .card-info-2 {
+      gap: 2.5rem;
+    }
+  }
+
+  @include tab-ver {
+    .colored-box-1 {
+      padding: $padding + 0.2rem $padding + 0.5rem 1.6rem $padding + 0.5rem;
+
+      .chip-card {
+        height: 3.35rem;
+      }
+    }
+
+    .colored-box-2 {
+      padding: 1.65rem $padding + 0.5rem 1.65rem $padding + 0.5rem;
+      .card-numb {
+        font-size: $fs-sm + 0.1rem;
+      }
+
+      .master-card {
+        height: 2.8rem;
+        width: 4rem;
+      }
+    }
+
+    .balance {
+      .card-info-text-sm {
+        font-size: $fs-SM;
+      }
+      .card-info-text-bg {
+        font-size: $fs-sm + 0.2rem;
+      }
+    }
+
+    .card-hol {
+      .cdi {
+        font-size: $fs-SM;
+      }
+
+      .c-d-i {
+        font-size: $fs-sm;
+      }
+    }
+  }
+
+  @include mbl-sm {
+    .colored-box-2 {
+      padding: 2rem 1rem;
+      gap: 0.5rem;
+      .master-card {
+        height: 1.5rem;
+        width: 2rem;
+      }
+    }
+
+    .colored-box-1 {
+      padding: 2rem 1rem;
+    }
+  }
 }

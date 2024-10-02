@@ -7,7 +7,7 @@
 html {
   font-size: 62.5%;
   height: 100%;
-  @media (max-height: 882px) {
+  @media (max-width: 811px) {
     height: auto !important;
   }
 }
@@ -17,4 +17,3 @@ body {
   line-height: 1;
   color: $black;
 }
-

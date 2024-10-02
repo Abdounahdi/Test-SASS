@@ -18,6 +18,27 @@
 @import "card";
 @import "money-spendings";
 
+.card-invoice {
+  display: none;
+  @include tablette {
+    display: flex;
+  }
+}
+
+.invoice-tab {
+  display: none;
+  @include tablette {
+    display: flex;
+  }
+}
+
+.invoice-lg {
+  display: flex;
+  @include tablette {
+    display: none;
+  }
+}
+
 ////////////// TRANSACTIONS
 ///
 
@@ -74,11 +95,9 @@
       line-height: 1.815rem;
       color: $heading-blue;
     }
-    @include tablette {
+    @include tab-l {
       padding: 1.5rem 1.8rem 0 1.8rem;
-    }
 
-    @include tablette {
       .tran-svg {
         height: 4%;
         width: 4rem;
@@ -100,6 +119,12 @@
 
   .won {
     color: $green-expenses !important;
+  }
+
+  @include tab {
+    .disapear {
+      display: none;
+    }
   }
 
   @include mbl-LG {
@@ -134,6 +159,7 @@
       }
     }
   }
+
   @include mbl-sm {
     .disapear-3 {
       display: none;
@@ -141,7 +167,7 @@
   }
 }
 
-////////////// TRANSACTIONS
+////////////// INVOICE
 ///
 
 .invoice-sent-section {
@@ -149,14 +175,13 @@
 
   .invoices-container {
     background-color: white;
-    padding: 1.5rem 3.1rem 2.6rem 2.5rem;
+    padding: 1.8rem 3.1rem 3rem 2.5rem;
     border-radius: $b-r-nm;
   }
 
   .invoice-info {
-    /* position: relative; */
-
     position: relative;
+
     .invoice-icon {
       height: 6rem;
       width: 6rem;
@@ -174,7 +199,7 @@
         font-size: $fs-sm;
         font-weight: 500;
         line-height: 1.93rem;
-        color: $grey;
+        color: $darker-blue;
       }
       .invoice-time {
         font-size: $fs-sm;
@@ -190,10 +215,23 @@
     color: $heading-blue;
   }
 
+  .invoices-container {
+    padding: $padding - 0.5rem $padding;
+  }
+
   @include tab-l {
+    .invoice-info {
+      gap: 1rem;
+    }
+
+    .invoice-money {
+      font-size: $fs-sm - 0.3rem;
+    }
+
     .invoices-container {
       padding: $padding;
     }
+
     .invoice-info {
       .invoice-icon {
         height: 4.5rem;
@@ -206,7 +244,11 @@
       }
       .invoice-text {
         .invoice-name {
-          font-size: $fs-SM;
+          font-size: $fs-sm - 0.2rem;
+        }
+
+        .invoice-time {
+          font-size: $fs-SM-sm;
         }
       }
     }
@@ -216,5 +258,213 @@
     .disapear-0 {
       display: none;
     }
+
+    @include tab {
+      .invoices-container {
+        padding: $padding - 0.5rem;
+      }
+    }
+
+    grid-column: 2;
+  }
+}
+
+////////////// CHART
+///
+
+.chart-section {
+  font-family: "Inter", sans-serif;
+  .chart-img {
+    width: 100%;
+    max-width: 68rem;
+    align-self: center;
+  }
+
+  .chart-container {
+    background-color: white;
+    padding: 2.5rem 3rem;
+    border-radius: $b-r-nm;
+    @include tab {
+      .chart-gap {
+        gap: 1rem;
+        .chart-gap-gap {
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .chart-describtion {
+    color: $heading-blue;
+    font-size: $fs-sm;
+
+    span {
+      color: $dark-pri;
+    }
+  }
+
+  .rectangle {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .chart-color-1 {
+    background-color: $chart-blue;
+    box-shadow: 0px 0px 15px 0px #11348580 inset;
+  }
+
+  .chart-color-2 {
+    background-color: $accent-light;
+    box-shadow: 0px 0px 15px 0px #ac0d6c80 inset;
+  }
+
+  @include tab-l {
+    .chart-describtion {
+      font-size: $fs-SM;
+    }
+  }
+
+  @include tablette {
+    .chart-container {
+      padding: 3rem;
+    }
+  }
+
+  @include tab {
+    .chart-container {
+      padding: 3rem 2.25rem;
+    }
+  }
+
+  .chart-img-sm {
+    display: none;
+  }
+
+  @include mbl-lg {
+    .chart-img-lg {
+      display: none;
+    }
+    .chart-img-sm {
+      display: inline;
+    }
+  }
+}
+
+.chart-sm {
+  display: none;
+}
+
+@include tab-ver {
+  .chart-lg {
+    display: none;
+  }
+
+  .chart-sm {
+    display: block;
+  }
+
+  .disapear-4 {
+    display: none;
+  }
+
+  .chart-code {
+    justify-content: flex-end;
+  }
+}
+
+///////////////////////////
+/// PAGES
+
+.pages-nav {
+  justify-content: flex-end;
+  font-family: "Inter", sans-serif;
+  grid-column: 1/-1;
+  padding: $padding;
+
+  .pages-svg {
+    width: 2rem;
+    height: 1.5rem;
+  }
+
+  .pages-text {
+    font-size: $fs-sm;
+    font-weight: 500;
+    line-height: 1.815rem;
+    color: $primary-light;
+  }
+
+  .pages-numb,
+  .opened {
+    text-decoration: none;
+    font-size: $fs-sm;
+    font-weight: 500;
+    line-height: 1.815rem;
+    color: white;
+  }
+
+  .pages-numb:link,
+  .pages-numb:visited {
+    color: $primary-light;
+    transition: all 0.4s;
+    padding: 1.1rem 1.6rem;
+  }
+
+  .pages-numb:hover,
+  .pages-numb:active {
+    color: white;
+    padding: 1.1rem 1.6rem;
+    background-color: $primary-light;
+    border-radius: $b-r-sm;
+  }
+
+  /* .opened:link,
+  .oponed:visited {
+    color: white;
+    padding: 1.1rem 1.6rem;
+    background-color: $primary-light;
+    border-radius: $b-r-sm;
+  } */
+
+  @include tablette {
+    .pages-svg {
+      width: 2rem;
+      height: 1.5rem;
+    }
+
+    .pages-text {
+      font-size: $fs-SM;
+    }
+
+    .pages-numb {
+      font-size: $fs-SM;
+    }
+
+    .pages-numb:link,
+    .pages-numb:visited {
+      padding: 0.7rem 1.2rem;
+    }
+  }
+
+  @include mbl-lg {
+    .pages-svg {
+      width: 1rem;
+      height: 1.5rem;
+    }
+  }
+
+  @include mbl-lg {
+    .pages-numb:link,
+    .pages-numb:visited {
+      padding: 0.5rem 1.1rem;
+    }
+
+    .pages-numb:hover {
+      padding: 0.5rem 1.1rem;
+    }
+  }
+
+  @include mbl-s {
+    display: none;
   }
 }

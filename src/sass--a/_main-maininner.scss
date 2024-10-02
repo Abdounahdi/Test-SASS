@@ -12,6 +12,9 @@
 ///
 
 .main-inner {
+  height: 100%;
+  min-height: max-content;
+
   background-color: $main;
   padding: $padding + 0.5rem $padding * 2;
   grid-template-columns: 66.4% 31.8%;
