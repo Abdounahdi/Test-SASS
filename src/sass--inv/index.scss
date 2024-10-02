@@ -94,13 +94,7 @@
       color: $heading-blue;
     }
 
-    .won {
-      color: $green-expenses;
-    }
-
-    .lost {
-      color: $accent;
-    }
+    
   }
 
   @include lap-sm {
@@ -142,13 +136,13 @@
 
   @include tab-ver {
     .inves {
-      padding-right:1.5rem ;
+      padding-right: 1.5rem;
 
       .inves-place {
         gap: 1.2rem;
       }
 
-      .inves-money{
+      .inves-money {
         gap: 2rem;
       }
 
@@ -163,19 +157,45 @@
   }
 
   @include mbl-hor {
-    .disapear-1{
+    .disapear-1 {
       display: none;
     }
   }
-
-
-
-
 }
 
+.stock-section {
+  .stock-cont {
+    padding: 2.7rem 4rem 3.4rem 3rem;
+    font-family: "Inter", sans-serif;
 
-.stock-section{
-  
+    
+
+    .stock-tb-i {
+      font-size: $fs-sm;
+      color: $black;
+    }
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 1.3rem 0 2.8rem 0 ;
+    }
+
+    .stock-tb-h {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.936rem;
+      color: $heading-blue;
+      border-bottom: solid 1px #F4F5F7;
+      padding: 0 0 0.8rem  0 ;
+
+    }
+
+    .last {
+      padding: 0;
+    }
+  }
 }
 
 ///////// INVESTMENT

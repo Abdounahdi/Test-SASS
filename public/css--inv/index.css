@@ -359,6 +359,23 @@ body {
   border-radius: 2rem;
 }
 
+.M-B {
+  margin-bottom: 4rem;
+}
+@media (max-width: 1024px) {
+  .M-B {
+    margin-bottom: 2rem;
+  }
+}
+
+.won {
+  color: #16dbcc !important;
+}
+
+.lost {
+  color: #fe5c73 !important;
+}
+
 .menu {
   padding: 3.3rem 2.5rem 0 4.1rem;
   position: relative;
@@ -863,12 +880,6 @@ body {
   line-height: 1.815rem;
   color: #718ebf;
 }
-.invesment-cont .inves .won {
-  color: #16dbcc;
-}
-.invesment-cont .inves .lost {
-  color: #fe5c73;
-}
 @media (max-width: 1355px) {
   .invesment-cont .inves {
     padding: 1.2rem;
@@ -919,4 +930,30 @@ body {
   .invesment-cont .disapear-1 {
     display: none;
   }
+}
+
+.stock-section .stock-cont {
+  padding: 2.7rem 4rem 3.4rem 3rem;
+  font-family: "Inter", sans-serif;
+}
+.stock-section .stock-cont .stock-tb-i {
+  font-size: 1.6rem;
+  color: #232323;
+}
+.stock-section .stock-cont table {
+  width: 100%;
+}
+.stock-section .stock-cont td {
+  padding: 1.3rem 0 2.8rem 0;
+}
+.stock-section .stock-cont .stock-tb-h {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.936rem;
+  color: #718ebf;
+  border-bottom: solid 1px #F4F5F7;
+  padding: 0 0 0.8rem 0;
+}
+.stock-section .stock-cont .last {
+  padding: 0;
 }
