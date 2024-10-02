@@ -354,6 +354,11 @@ body {
   }
 }
 
+.C {
+  background-color: white;
+  border-radius: 2rem;
+}
+
 .menu {
   padding: 3.3rem 2.5rem 0 4.1rem;
   position: relative;
@@ -792,7 +797,7 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .money-goes {
     display: none;
   }
@@ -826,5 +831,92 @@ body {
   }
   .charts-container .img-sm {
     display: inline;
+  }
+}
+
+.inves-stock-section {
+  grid-template-columns: 57.2% 39.72%;
+}
+@media (max-width: 819px) {
+  .inves-stock-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.invesment-cont .inves {
+  font-family: "Inter", sans-serif;
+  padding: 1.5rem;
+  padding-right: 3.6rem;
+}
+.invesment-cont .inves .inves-svg {
+  height: 6rem;
+  width: 6rem;
+}
+.invesment-cont .inves .inves-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.936rem;
+  color: #232323;
+}
+.invesment-cont .inves .inves-type {
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+  color: #718ebf;
+}
+.invesment-cont .inves .won {
+  color: #16dbcc;
+}
+.invesment-cont .inves .lost {
+  color: #fe5c73;
+}
+@media (max-width: 1355px) {
+  .invesment-cont .inves {
+    padding: 1.2rem;
+    padding-right: 1.4rem;
+  }
+  .invesment-cont .inves .inves-svg {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .invesment-cont .inves .inves-title {
+    font-size: 1.2rem;
+  }
+  .invesment-cont .inves .inves-type {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .invesment-cont .disapear {
+    display: none;
+  }
+}
+@media (max-width: 996px) {
+  .invesment-cont .inves .inves-money {
+    gap: 1rem;
+  }
+  .invesment-cont .inves .inves-place {
+    gap: 1rem;
+  }
+}
+@media (max-width: 819px) {
+  .invesment-cont .inves {
+    padding-right: 1.5rem;
+  }
+  .invesment-cont .inves .inves-place {
+    gap: 1.2rem;
+  }
+  .invesment-cont .inves .inves-money {
+    gap: 2rem;
+  }
+  .invesment-cont .inves .inves-title {
+    font-size: 1.4rem;
+  }
+  .invesment-cont .inves .inves-type {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 653px) {
+  .invesment-cont .disapear-1 {
+    display: none;
   }
 }

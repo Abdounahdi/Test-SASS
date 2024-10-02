@@ -1,9 +1,11 @@
 @use "sass:math";
 
 $breakpoints: (
+  "lap-sm": 1355px,
   "tab-lg": 1300px,
   "tab-l": 1160px,
   "tablette": 1024px,
+  "tablet": 996px ,
   "tab": 976px,
   "tab-sm": 902px,
   "tab-ver": 819px,
@@ -14,6 +16,12 @@ $breakpoints: (
   "mbl-s": 370px,
   "mbl-sm": 335px,
 );
+
+@mixin lap-sm {
+  @media (max-width: map-get($breakpoints, "lap-sm")) {
+    @content;
+  }
+}
 
 @mixin tab-lg {
   @media (max-width: map-get($breakpoints, "tab-lg")) {
@@ -29,6 +37,12 @@ $breakpoints: (
 
 @mixin tablette {
   @media (max-width: map-get($breakpoints, "tablette")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, "tablet")) {
     @content;
   }
 }

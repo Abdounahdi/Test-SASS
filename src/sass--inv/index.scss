@@ -43,14 +43,11 @@
   }
 
   @include mbl {
-    
-      .chart{
-        
-        .chart-img-container{
-          padding: 2.6rem 3rem 2rem 2rem;
-        }
+    .chart {
+      .chart-img-container {
+        padding: 2.6rem 3rem 2rem 2rem;
       }
-    
+    }
 
     .img-lg {
       display: none;
@@ -61,3 +58,125 @@
     }
   }
 }
+
+///////// INVESTMENT
+///
+
+.inves-stock-section {
+  grid-template-columns: 57.2% 39.72%;
+
+  @include tab-ver {
+    grid-template-columns: 1fr;
+  }
+}
+
+.invesment-cont {
+  .inves {
+    font-family: "Inter", sans-serif;
+    padding: $padding - 0.5rem;
+    padding-right: 3.6rem;
+
+    .inves-svg {
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .inves-title {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.936rem;
+      color: $black;
+    }
+
+    .inves-type {
+      font-size: $fs-sm - 0.1rem;
+      line-height: 1.815rem;
+      color: $heading-blue;
+    }
+
+    .won {
+      color: $green-expenses;
+    }
+
+    .lost {
+      color: $accent;
+    }
+  }
+
+  @include lap-sm {
+    .inves {
+      padding: 1.2rem;
+      padding-right: 1.4rem;
+      .inves-svg {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      .inves-title {
+        font-size: $fs-SM;
+      }
+
+      .inves-type {
+        font-size: $fs-SM-sm;
+      }
+    }
+  }
+
+  @include tablette {
+    .disapear {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    .inves {
+      .inves-money {
+        gap: 1rem;
+      }
+
+      .inves-place {
+        gap: 1rem;
+      }
+    }
+  }
+
+  @include tab-ver {
+    .inves {
+      padding-right:1.5rem ;
+
+      .inves-place {
+        gap: 1.2rem;
+      }
+
+      .inves-money{
+        gap: 2rem;
+      }
+
+      .inves-title {
+        font-size: $fs-SM + 0.2rem;
+      }
+
+      .inves-type {
+        font-size: $fs-SM;
+      }
+    }
+  }
+
+  @include mbl-hor {
+    .disapear-1{
+      display: none;
+    }
+  }
+
+
+
+
+}
+
+
+.stock-section{
+  
+}
+
+///////// INVESTMENT
+///
