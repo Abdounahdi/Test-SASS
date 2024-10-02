@@ -1230,8 +1230,7 @@ body {
   transition: all 0.4s;
   padding: 1.1rem 1.6rem;
 }
-.pages-nav .pages-numb:hover,
-.pages-nav .pages-numb:active {
+.pages-nav .pages-numb:hover, .pages-nav .pages-numb:active {
   color: white;
   padding: 1.1rem 1.6rem;
   background-color: #1814f3;

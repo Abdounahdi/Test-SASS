@@ -407,11 +407,10 @@
   .pages-numb:visited {
     color: $primary-light;
     transition: all 0.4s;
-    padding: 1.3rem 1.8rem;
+    padding: 1.1rem 1.6rem;
   }
 
-  .pages-numb:hover,
-  .pages-numb:active {
+  .pages-numb:hover , .pages-numb:active{
     color: white;
     padding: 1.1rem 1.6rem;
     background-color: $primary-light;
@@ -444,11 +443,6 @@
     .pages-numb:visited {
       padding: 0.7rem 1.2rem;
     }
-
-    .pages-numb:hover,
-    .pages-numb:active {
-      padding: 0.5rem 1rem;
-    }
   }
 
   @include mbl-lg {
@@ -459,18 +453,18 @@
   }
 
   @include mbl-lg {
+
     .pages-numb:link,
     .pages-numb:visited {
       padding: 0.5rem 1.1rem;
     }
 
-    .pages-numb:hover,
-    .pages-numb:active {
-      padding: 0.35rem 0.8rem;
+    .pages-numb:hover {
+      padding: 0.5rem 1.1rem;
     }
   }
 
-  @include mbl-s {
+  @include mbl-s{
     display: none;
   }
 }
