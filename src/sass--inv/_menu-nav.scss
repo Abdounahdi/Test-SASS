@@ -46,7 +46,8 @@
     color: $primary-light;
   }
 
-  .colored-page-txt:link , .colored-page-txt:visited {
+  .colored-page-txt:link,
+  .colored-page-txt:visited {
     color: $primary-light;
   }
 
@@ -118,18 +119,18 @@
 
   position: absolute;
 
-  transform: translate(-240%, 348%);
+  transform: translate(-240%, 459%);
 
   @include tablette {
     height: $svg * 2;
 
-    transform: translate(-200%, 342%);
+    transform: translate(-200%, 459%);
   }
 
   @include tab-sm {
     height: 3rem;
 
-    transform: translate(-133%, 567%);
+    transform: translate(-133%, 759%);
 
     border-radius: 0.5rem;
   }

@@ -7,6 +7,7 @@
   "scripts": {
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "build:sass--a": "sass  --no-source-map src/sass--a:public/css--a",
+    "build:sass--inv": "sass  --no-source-map src/sass--inv:public/css--inv",
     "copy:html": "copyfiles -u 1 src/*.html public",
     "copy:assets": "copyfiles -u 1 src/Assets/**/* public",
     "copy": "npm-run-all --parallel copy:*",
@@ -14,6 +15,7 @@
     "watch:assets": "onchange 'src/Assets/**/*' -- npm run copy:assets",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch:sass--a": "sass  --no-source-map --watch src/sass--a:public/css--a",
+    "watch:sass--inv": "sass  --no-source-map --watch src/sass--inv:public/css--inv",
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel  watch serve",
