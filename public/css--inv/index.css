@@ -669,3 +669,106 @@ body {
     padding: 2.2rem 2.5rem 2.5rem 2.5rem;
   }
 }
+
+.money-goes {
+  display: flex;
+  grid-column: 1/-1;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+.money-goes .money-card {
+  padding: 2rem 1.8rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+.money-goes .money-card svg {
+  height: 7rem;
+  width: 7rem;
+}
+.money-goes .money-card .money-goes-text {
+  font-family: "Inter", sans-serif;
+}
+.money-goes .money-card .money-goes-text .money-type {
+  text-wrap: nowrap;
+  font-size: 1.6rem;
+  line-height: 1.936rem;
+  color: #718ebf;
+}
+.money-goes .money-card .money-goes-text .dollars {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.026rem;
+}
+.money-goes .money-card-padd {
+  padding: 2rem 4.4rem;
+}
+@media (max-width: 1300px) {
+  .money-goes .money-card svg {
+    height: 5rem;
+    width: 5rem;
+  }
+  .money-goes .money-card .money-goes-text .money-type {
+    font-size: 1.2rem;
+  }
+  .money-goes .money-card .money-goes-text .dollars {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 976px) {
+  .money-goes .money-card {
+    padding: 2rem 0.8rem;
+  }
+  .money-goes .money-card-padd {
+    padding: 2rem 3rem;
+  }
+}
+@media (max-width: 819px) {
+  .money-goes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .money-goes .money-card-padd {
+    grid-column: 1/-1;
+    padding: 2rem 5.6rem;
+    justify-self: center;
+  }
+}
+@media (max-width: 480px) {
+  .money-goes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .money-goes .money-card {
+    justify-self: auto;
+    padding: 2rem 8.5rem 2rem 5rem;
+    width: 100%;
+  }
+  .money-goes .money-card svg {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .money-goes .money-card .money-goes-text .money-type {
+    font-size: 1.2rem;
+  }
+  .money-goes .money-card .money-goes-text .dollars {
+    font-size: 1.6rem;
+  }
+  .money-goes .money-card-padd {
+    grid-column: 1;
+    padding: 2rem 13.6rem 2rem 5rem;
+  }
+}
+@media (max-width: 370px) {
+  .money-goes .money-card {
+    padding: 2rem 0 2rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .money-goes {
+    display: none;
+  }
+}

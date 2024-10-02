@@ -11,6 +11,7 @@ $breakpoints: (
   "mbl-LG": 510px,
   "mbl-lg": 480px,
   "mbl": 375px,
+  "mbl-s": 370px,
   "mbl-sm": 335px,
 );
 
@@ -74,7 +75,12 @@ $breakpoints: (
   }
 }
 
-/////////// NOT USED YET
+@mixin mbl-s {
+  @media (max-width: map-get($breakpoints, "mbl-s")) {
+    @content;
+  }
+}
+
 @mixin mbl-sm {
   @media (max-width: map-get($breakpoints, "mbl-sm")) {
     @content;
