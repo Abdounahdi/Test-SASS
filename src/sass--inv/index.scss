@@ -4,7 +4,6 @@
 //generals
 @import "generals";
 
-
 /// // MEDIA QUERRIES
 
 @import "mediaquerries";
@@ -18,24 +17,47 @@
 @import "main-maininner";
 @import "money-spendings";
 
-
-
-
-
 ///////// CHARTS
-/// 
+///
 
-.charts-container{
+.charts-container {
   grid-template-columns: 1fr 1fr;
   .chart {
-    .chart-img-container{
+    .chart-img-container {
       padding: 2.6rem 3rem 2.8rem 2.9rem;
       background-color: white;
       border-radius: $b-r-nm;
 
-      img {
+      .img-lg,
+      .img-sm {
         width: 100%;
       }
+    }
+  }
+
+  .img-sm {
+    display: none;
+  }
+  @include tab-ver {
+    grid-template-columns: 1fr;
+  }
+
+  @include mbl {
+    
+      .chart{
+        
+        .chart-img-container{
+          padding: 2.6rem 3rem 2rem 2rem;
+        }
+      }
+    
+
+    .img-lg {
+      display: none;
+    }
+
+    .img-sm {
+      display: inline;
     }
   }
 }

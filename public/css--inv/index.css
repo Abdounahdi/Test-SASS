@@ -805,6 +805,26 @@ body {
   background-color: white;
   border-radius: 2.5rem;
 }
-.charts-container .chart .chart-img-container img {
+.charts-container .chart .chart-img-container .img-lg,
+.charts-container .chart .chart-img-container .img-sm {
   width: 100%;
+}
+.charts-container .img-sm {
+  display: none;
+}
+@media (max-width: 819px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 375px) {
+  .charts-container .chart .chart-img-container {
+    padding: 2.6rem 3rem 2rem 2rem;
+  }
+  .charts-container .img-lg {
+    display: none;
+  }
+  .charts-container .img-sm {
+    display: inline;
+  }
 }
