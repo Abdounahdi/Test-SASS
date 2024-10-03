@@ -49,6 +49,10 @@ body {
   align-items: flex-start;
 }
 
+.f-end {
+  justify-content: flex-end;
+}
+
 .d-f-c {
   display: flex;
   flex-direction: column;
@@ -672,10 +676,18 @@ body {
   }
 }
 
+.main-inner {
+  height: 100%;
+}
+
 .form-container {
   background-color: white;
   padding: 3.7rem 3rem 3rem 3rem;
   border-radius: 2.5rem;
+}
+
+.form-container {
+  height: fit-content;
 }
 
 .transactions-menu {
@@ -725,6 +737,7 @@ body {
 
 .details-cont {
   grid-template-columns: 12% 85%;
+  margin-bottom: 2rem;
 }
 .details-cont .profile-pic-container {
   height: fit-content;
@@ -783,4 +796,23 @@ body {
   bottom: 0;
   right: 0;
   transform: translate(-180%, -300%);
+}
+
+.save-btn {
+  padding: 1.4rem 7.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.815rem;
+  color: white;
+  background-color: #1814f3;
+  border-radius: 1rem;
+  border: 1px #1814f3 solid;
+  transition: all 0.3s;
+}
+
+.save-btn:hover {
+  background-color: white;
+  border: 1px #1814f3 solid;
+  color: #1814f3;
 }

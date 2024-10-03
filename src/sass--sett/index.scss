@@ -15,10 +15,20 @@
 
 @import "menu-nav";
 @import "main-maininner";
+
+.main-inner{
+  height: 100%
+}
+
 @import "form-container";
 
 ///////// SETTINGS MENU
 ///
+
+
+.form-container {
+  height: fit-content;
+}
 
 .transactions-menu {
   border-bottom: solid $brd-tran 1px;
@@ -71,6 +81,7 @@
 
 .details-cont {
   grid-template-columns: 12% 85%;
+  margin-bottom: $padding ;
 
   .profile-pic-container {
     height: fit-content;
@@ -139,4 +150,23 @@
       transform: translate(-180%, -300%);
     }
   }
+}
+
+.save-btn {
+  padding: 1.4rem 7.4rem;
+  font-family: 'Inter' , sans-serif;
+  font-size: $fs-sm;
+  font-weight: 500;
+  line-height: 1.815rem;
+  color: white;
+  background-color: $primary-light;
+  border-radius: $b-r-sm;
+  border: 1px $primary-light solid;
+  transition: all 0.3s;
+}
+
+.save-btn:hover {
+  background-color: white;
+  border: 1px $primary-light solid;
+  color: $primary-light;
 }
