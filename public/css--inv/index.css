@@ -854,6 +854,11 @@ body {
 .inves-stock-section {
   grid-template-columns: 57.2% 39.72%;
 }
+@media (max-width: 1024px) {
+  .inves-stock-section {
+    gap: 2.5rem;
+  }
+}
 @media (max-width: 819px) {
   .inves-stock-section {
     grid-template-columns: 1fr;
@@ -882,13 +887,26 @@ body {
 }
 @media (max-width: 1355px) {
   .invesment-cont .inves {
-    padding: 1.2rem;
+    padding: 2.2rem;
     padding-right: 1.4rem;
   }
   .invesment-cont .inves .inves-svg {
     height: 4.5rem;
     width: 4.5rem;
   }
+}
+@media (max-width: 1275px) {
+  .invesment-cont .inves .inves-title {
+    font-size: 1.4rem;
+  }
+  .invesment-cont .inves .inves-type {
+    font-size: 1.3rem;
+  }
+  .invesment-cont .inves .inves-place {
+    gap: 1rem;
+  }
+}
+@media (max-width: 1157px) {
   .invesment-cont .inves .inves-title {
     font-size: 1.2rem;
   }
@@ -900,12 +918,12 @@ body {
   .invesment-cont .disapear {
     display: none;
   }
+  .invesment-cont .inves {
+    padding: 1.2rem;
+  }
 }
 @media (max-width: 996px) {
   .invesment-cont .inves .inves-money {
-    gap: 1rem;
-  }
-  .invesment-cont .inves .inves-place {
     gap: 1rem;
   }
 }
@@ -939,21 +957,63 @@ body {
 .stock-section .stock-cont .stock-tb-i {
   font-size: 1.6rem;
   color: #232323;
+  padding-bottom: 2.8rem;
 }
 .stock-section .stock-cont table {
   width: 100%;
-}
-.stock-section .stock-cont td {
-  padding: 1.3rem 0 2.8rem 0;
 }
 .stock-section .stock-cont .stock-tb-h {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.936rem;
   color: #718ebf;
-  border-bottom: solid 1px #F4F5F7;
+  border-bottom: solid 1px #f4f5f7;
   padding: 0 0 0.8rem 0;
+}
+.stock-section .stock-cont .first {
+  padding-top: 1.3rem;
 }
 .stock-section .stock-cont .last {
   padding: 0;
+}
+@media (max-width: 1157px) {
+  .stock-section .stock-cont {
+    padding: 1.7rem 2rem 1.9rem 1.8rem;
+  }
+  .stock-section .stock-cont .stock-tb-i {
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+  }
+  .stock-section .stock-cont .stock-tb-h {
+    font-size: 1.4rem;
+    padding-bottom: 0.8rem;
+  }
+  .stock-section .stock-cont .first {
+    padding-top: 0.9rem;
+  }
+}
+@media (max-width: 1024px) {
+  .stock-section .stock-cont {
+    padding: 1.7rem 1.5rem 1.9rem 1.8rem;
+  }
+  .stock-section .stock-cont .stock-tb-i {
+    font-size: 1.2rem;
+    padding-bottom: 2.1rem;
+  }
+  .stock-section .stock-cont .stock-tb-h {
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
+  }
+  .stock-section .stock-cont .first {
+    padding-top: 0.9rem;
+  }
+  .stock-section .stock-cont .last {
+    padding: 0;
+  }
+  .stock-section .stock-cont .disapear-2 {
+    display: none;
+  }
+  .stock-section .stock-cont .r-last {
+    padding: 0;
+  }
 }

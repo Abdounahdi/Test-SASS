@@ -3,6 +3,8 @@
 $breakpoints: (
   "lap-sm": 1355px,
   "tab-lg": 1300px,
+  "tab---l": 1275px,
+  "tab---ll": 1157px,
   "tab-l": 1160px,
   "tablette": 1024px,
   "tablet": 996px,
@@ -25,6 +27,18 @@ $breakpoints: (
 
 @mixin tab-lg {
   @media (max-width: map-get($breakpoints, "tab-lg")) {
+    @content;
+  }
+}
+
+@mixin tab---l {
+  @media (max-width: map-get($breakpoints, "tab---l")) {
+    @content;
+  }
+}
+
+@mixin tab---ll {
+  @media (max-width: map-get($breakpoints, "tab---ll")) {
     @content;
   }
 }
