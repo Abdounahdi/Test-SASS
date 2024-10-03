@@ -93,8 +93,6 @@
       line-height: 1.815rem;
       color: $heading-blue;
     }
-
-    
   }
 
   @include lap-sm {
@@ -168,8 +166,6 @@
     padding: 2.7rem 4rem 3.4rem 3rem;
     font-family: "Inter", sans-serif;
 
-    
-
     .stock-tb-i {
       font-size: $fs-sm;
       color: $black;
@@ -179,7 +175,7 @@
     }
 
     td {
-      padding: 1.3rem 0 2.8rem 0 ;
+      padding: 1.3rem 0 2.8rem 0;
     }
 
     .stock-tb-h {
@@ -187,9 +183,8 @@
       font-weight: 500;
       line-height: 1.936rem;
       color: $heading-blue;
-      border-bottom: solid 1px #F4F5F7;
-      padding: 0 0 0.8rem  0 ;
-
+      border-bottom: solid 1px #f4f5f7;
+      padding: 0 0 0.8rem 0;
     }
 
     .last {

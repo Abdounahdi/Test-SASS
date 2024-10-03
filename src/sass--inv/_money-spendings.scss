@@ -1,8 +1,6 @@
 ////////// MONEY GOES
 //
 
-
-
 .money-goes {
   display: flex;
   grid-column: 1/-1;
@@ -10,7 +8,6 @@
   padding-bottom: $padding;
   gap: 1rem;
   
-
   .money-card {
     padding: $padding $padding - 0.2rem;
     background-color: white;
@@ -72,13 +69,12 @@
     }
   }
 
-
   @include tab-ver {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
-    .money-card-padd{
+    .money-card-padd {
       grid-column: 1/-1;
       padding: $padding $padding * 2.8;
       justify-self: center;
@@ -108,22 +104,20 @@
           font-size: $fs-sm;
         }
       }
-
-    }.money-card-padd{
-     grid-column: 1;
-     padding: $padding 13.6rem $padding 5rem;
-     
+    }
+    .money-card-padd {
+      grid-column: 1;
+      padding: $padding 13.6rem $padding 5rem;
     }
   }
 
   @include mbl {
-    
   }
 
   @include mbl-s {
-.money-card{
-  padding: $padding 0 $padding 1rem;
-}
+    .money-card {
+      padding: $padding 0 $padding 1rem;
+    }
   }
 }
 

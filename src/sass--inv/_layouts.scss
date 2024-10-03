@@ -62,14 +62,12 @@ body {
   }
 }
 
-
 .C {
   background-color: white;
   border-radius: $b-r-av;
 }
 
-
-.M-B{
+.M-B {
   margin-bottom: 4rem;
   @include tablette {
     margin-bottom: 2rem;
