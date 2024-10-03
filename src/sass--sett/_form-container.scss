@@ -1,5 +1,10 @@
-.form-container{
+.form-container {
   background-color: white;
   padding: 3.7rem 3rem 3rem 3rem;
   border-radius: $b-r-nm;
+  height: fit-content;
+
+  @include tablette {
+    padding: 2.5rem;
+  }
 }

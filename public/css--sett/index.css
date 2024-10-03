@@ -684,10 +684,12 @@ body {
   background-color: white;
   padding: 3.7rem 3rem 3rem 3rem;
   border-radius: 2.5rem;
-}
-
-.form-container {
   height: fit-content;
+}
+@media (max-width: 1024px) {
+  .form-container {
+    padding: 2.5rem;
+  }
 }
 
 .transactions-menu {
@@ -728,6 +730,12 @@ body {
   background-color: #1814f3;
   border-radius: 1rem;
 }
+@media (max-width: 1024px) {
+  .transactions-menu .tran-link:link,
+  .transactions-menu .tran-link:visited {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 510px) {
   .transactions-menu {
     gap: 5rem;
@@ -755,6 +763,18 @@ body {
 .details-cont .edit-pen-svg {
   height: 3rem;
   width: 3rem;
+}
+@media (max-width: 1024px) {
+  .details-cont {
+    grid-template-columns: 15% 82%;
+    gap: 3rem;
+  }
+}
+@media (max-width: 819px) {
+  .details-cont {
+    grid-template-columns: 20% 77%;
+    gap: 0.5rem;
+  }
 }
 
 .input-cont {
@@ -797,6 +817,22 @@ body {
   right: 0;
   transform: translate(-180%, -300%);
 }
+@media (max-width: 1024px) {
+  .input-cont {
+    gap: 2rem;
+  }
+  .input-cont .input label {
+    font-size: 1.2rem;
+  }
+  .input-cont .input input,
+  .input-cont .input select {
+    padding: 1.3rem 0 1.2rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .input-cont .input input::placeholder {
+    font-size: 1.2rem;
+  }
+}
 
 .save-btn {
   padding: 1.4rem 7.4rem;
@@ -809,6 +845,12 @@ body {
   border-radius: 1rem;
   border: 1px #1814f3 solid;
   transition: all 0.3s;
+}
+@media (max-width: 1024px) {
+  .save-btn {
+    padding: 1.1rem 4.7rem;
+    font-size: 1.5rem;
+  }
 }
 
 .save-btn:hover {

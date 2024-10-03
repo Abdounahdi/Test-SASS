@@ -16,19 +16,14 @@
 @import "menu-nav";
 @import "main-maininner";
 
-.main-inner{
-  height: 100%
+.main-inner {
+  height: 100%;
 }
 
 @import "form-container";
 
 ///////// SETTINGS MENU
 ///
-
-
-.form-container {
-  height: fit-content;
-}
 
 .transactions-menu {
   border-bottom: solid $brd-tran 1px;
@@ -73,6 +68,13 @@
     }
   }
 
+  @include tablette {
+    .tran-link:link,
+    .tran-link:visited {
+      font-size: $fs-SM;
+    }
+  }
+
   @include mbl-LG {
     gap: 5rem;
     padding-left: 1rem;
@@ -81,7 +83,7 @@
 
 .details-cont {
   grid-template-columns: 12% 85%;
-  margin-bottom: $padding ;
+  margin-bottom: $padding;
 
   .profile-pic-container {
     height: fit-content;
@@ -101,6 +103,16 @@
   .edit-pen-svg {
     height: 3rem;
     width: 3rem;
+  }
+
+  @include tablette {
+    grid-template-columns: 15% 82%;
+    gap: 3rem;
+  }
+
+  @include tab-ver {
+    grid-template-columns: 20% 77%;
+    gap: 0.5rem;
   }
 }
 
@@ -150,11 +162,30 @@
       transform: translate(-180%, -300%);
     }
   }
+
+  @include tablette {
+    gap: 2rem;
+    .input {
+      label {
+        font-size: $fs-SM;
+      }
+
+      input,
+      select {
+        padding: 1.3rem 0 1.2rem 1.5rem;
+        font-size: $fs-SM;
+      }
+
+      input::placeholder {
+        font-size: $fs-SM;
+      }
+    }
+  }
 }
 
 .save-btn {
   padding: 1.4rem 7.4rem;
-  font-family: 'Inter' , sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: $fs-sm;
   font-weight: 500;
   line-height: 1.815rem;
@@ -163,6 +194,11 @@
   border-radius: $b-r-sm;
   border: 1px $primary-light solid;
   transition: all 0.3s;
+
+  @include tablette {
+    padding: 1.1rem 4.7rem;
+    font-size: $fs-sm - 0.1rem;
+  }
 }
 
 .save-btn:hover {
