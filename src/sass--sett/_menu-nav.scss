@@ -118,18 +118,18 @@
 
   position: absolute;
 
-  transform: translate(-240%, 348%);
+  transform: translate(-240%, 990%);
 
   @include tablette {
     height: $svg * 2;
 
-    transform: translate(-200%, 342%);
+    transform: translate(-200%,1025%);
   }
 
   @include tab-sm {
     height: 3rem;
 
-    transform: translate(-133%, 567%);
+    transform: translate(-133%, 1704%);
 
     border-radius: 0.5rem;
   }

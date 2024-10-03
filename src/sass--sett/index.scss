@@ -15,3 +15,128 @@
 
 @import "menu-nav";
 @import "main-maininner";
+@import "form-container";
+
+///////// SETTINGS MENU
+///
+
+.transactions-menu {
+  border-bottom: solid $brd-tran 1px;
+  padding: 0 1rem 0.8rem $padding;
+  overflow: hidden;
+  margin-bottom: $padding;
+
+  .tran-link:link,
+  .tran-link:visited {
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: $fs-SM + 0.1rem;
+    font-weight: 500;
+    line-height: 1.573rem;
+  }
+
+  .unchecked-link:link,
+  .unchecked-link:visited {
+    color: $heading-blue;
+  }
+
+  .unchecked-link:hover,
+  .unchecked-link:active {
+    color: $primary-light;
+  }
+
+  .checked-link:link,
+  .checked-link:visited {
+    color: $primary-light;
+  }
+
+  .checked-link {
+    position: relative;
+    .indicator {
+      position: absolute;
+      transform: translate(-9%, 23%);
+      width: 120%;
+      height: 100%;
+      background-color: $primary-light;
+      border-radius: $b-r-sm;
+    }
+  }
+
+  @include mbl-LG {
+    gap: 5rem;
+    padding-left: 1rem;
+  }
+}
+
+.details-cont {
+  grid-template-columns: 12% 85%;
+
+  .profile-pic-container {
+    height: fit-content;
+    position: relative;
+  }
+
+  .edit-pen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10%, 360%);
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .edit-pen-svg {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.input-cont {
+  grid-template-columns: 1fr 1fr;
+  font-family: "Inter", sans-serif;
+
+  .input {
+    label {
+      font-size: $fs-sm;
+      font-weight: 400;
+      line-height: 1.936rem;
+      color: $black;
+    }
+
+    input,
+    select {
+      padding: $padding - 0.4rem 0 $padding - 0.4rem $padding;
+      border-radius: $b-r-av - 0.5rem;
+      outline: none;
+      border: solid 1px $brd-white;
+      font-size: $fs-sm;
+      color: $dark-pri;
+    }
+
+    input::placeholder {
+      font-size: $fs-sm - 0.1rem;
+      line-height: 1.815rem;
+      color: $heading-blue;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .select-rel {
+    position: relative;
+    .select-svg {
+      position: absolute;
+      height: 0.7rem;
+      width: 1.2rem;
+      bottom: 0;
+      right: 0;
+      transform: translate(-180%, -300%);
+    }
+  }
+}
