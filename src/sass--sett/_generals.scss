@@ -7,9 +7,6 @@
 html {
   font-size: 62.5%;
   height: 100%;
-  @media (max-height: 882px) {
-    height: auto !important;
-  }
 }
 
 body {

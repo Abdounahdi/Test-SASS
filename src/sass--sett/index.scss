@@ -75,9 +75,17 @@
     }
   }
 
+  @include mbl-LLGG {
+    justify-content: space-between;
+  }
+
   @include mbl-LG {
     gap: 5rem;
     padding-left: 1rem;
+  }
+
+  @include mbl-lg {
+    gap: 2rem;
   }
 }
 
@@ -88,11 +96,15 @@
   .profile-pic-container {
     height: fit-content;
     position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 
   .edit-pen {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     transform: translate(-10%, 360%);
     border: none;
@@ -113,6 +125,18 @@
   @include tab-ver {
     grid-template-columns: 20% 77%;
     gap: 0.5rem;
+  }
+
+  @include mbl-LLGG {
+    grid-template-columns: 1fr;
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      max-height: 17rem;
+      img {
+        width: auto;
+      }
+    }
   }
 }
 
@@ -181,6 +205,11 @@
       }
     }
   }
+
+  @include mbl-LG {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
 }
 
 .save-btn {
@@ -198,6 +227,10 @@
   @include tablette {
     padding: 1.1rem 4.7rem;
     font-size: $fs-sm - 0.1rem;
+  }
+
+  @include mbl-LG {
+    width: 100%;
   }
 }
 

@@ -1,16 +1,22 @@
 @use "sass:math";
 
 $breakpoints: (
+  "lap-sm": 1355px,
   "tab-lg": 1300px,
+  "tab---l": 1275px,
+  "tab---ll": 1157px,
   "tab-l": 1160px,
   "tablette": 1024px,
+  "tablet": 996px,
   "tab": 976px,
   "tab-sm": 902px,
   "tab-ver": 819px,
   "mbl-hor": 653px,
+  "mbl-LLGG": 555px,
   "mbl-LG": 510px,
   "mbl-lg": 480px,
   "mbl": 375px,
+  "mbl-s": 370px,
   "mbl-sm": 335px,
 );
 
@@ -52,6 +58,12 @@ $breakpoints: (
 
 @mixin mbl-hor {
   @media (max-width: map-get($breakpoints, "mbl-hor")) {
+    @content;
+  }
+}
+
+@mixin mbl-LLGG {
+  @media (max-width: map-get($breakpoints, "mbl-LLGG")) {
     @content;
   }
 }

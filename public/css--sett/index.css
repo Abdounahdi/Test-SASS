@@ -8,11 +8,6 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
-@media (max-height: 882px) {
-  html {
-    height: auto !important;
-  }
-}
 
 body {
   font-family: "Inter", sans-serif;
@@ -736,10 +731,20 @@ body {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 555px) {
+  .transactions-menu {
+    justify-content: space-between;
+  }
+}
 @media (max-width: 510px) {
   .transactions-menu {
     gap: 5rem;
     padding-left: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .transactions-menu {
+    gap: 2rem;
   }
 }
 
@@ -751,9 +756,13 @@ body {
   height: fit-content;
   position: relative;
 }
+.details-cont .profile-pic-container img {
+  display: block;
+  width: 100%;
+}
 .details-cont .edit-pen {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   transform: translate(-10%, 360%);
   border: none;
@@ -774,6 +783,19 @@ body {
   .details-cont {
     grid-template-columns: 20% 77%;
     gap: 0.5rem;
+  }
+}
+@media (max-width: 555px) {
+  .details-cont {
+    grid-template-columns: 1fr;
+  }
+  .details-cont .profile-pic-container {
+    display: flex;
+    justify-content: center;
+    max-height: 17rem;
+  }
+  .details-cont .profile-pic-container img {
+    width: auto;
   }
 }
 
@@ -833,6 +855,12 @@ body {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 510px) {
+  .input-cont {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
 
 .save-btn {
   padding: 1.4rem 7.4rem;
@@ -850,6 +878,11 @@ body {
   .save-btn {
     padding: 1.1rem 4.7rem;
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 510px) {
+  .save-btn {
+    width: 100%;
   }
 }
 
