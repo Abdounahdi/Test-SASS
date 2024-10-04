@@ -89,11 +89,85 @@
   }
 }
 
+.tran-small {
+  display: none;
+}
+
+@include mbl-SM {
+  .tran-large {
+    display: none;
+  }
+  .tran-small {
+    display: flex;
+
+    ion-icon {
+      height: 2rem;
+      width: 2rem;
+      color: $primary-light;
+    }
+
+    .indicator {
+      transform: translate(-14%, 11%) !important;
+      border-radius: 0.87rem !important;
+    }
+  }
+}
+
 .details-cont {
   grid-template-columns: 12% 85%;
   margin-bottom: $padding;
 
-  .profile-pic-container {
+  .profile-cont {
+    background: url(".././Assets/set-assets/user-face.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 14rem;
+    width: 14rem;
+
+    .profile-edit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: $primary-light;
+      transform: translate(-22%, -22%);
+    }
+
+    .edit-btn {
+      background: none;
+      border: none;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  @include tab-large {
+    .profile-cont {
+      height: 11rem;
+      width: 11rem;
+
+      .profile-edit {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  @include tab-ver {
+    .profile-cont {
+      height: 9rem;
+      width: 9rem;
+
+      .profile-edit {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  /* .profile-pic-container {
     height: fit-content;
     position: relative;
     img {
@@ -115,7 +189,7 @@
   .edit-pen-svg {
     height: 3rem;
     width: 3rem;
-  }
+  } */
 
   @include tablette {
     grid-template-columns: 15% 82%;
@@ -129,12 +203,28 @@
 
   @include mbl-LLGG {
     grid-template-columns: 1fr;
-    .profile-pic-container {
+    gap: 2.2rem;
+    /* .profile-pic-container {
       display: flex;
       justify-content: center;
       max-height: 17rem;
       img {
         width: auto;
+      }
+    } */
+
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-cont {
+      height: 15rem;
+      width: 15rem;
+
+      .profile-edit {
+        height: 3rem;
+        width: 3rem;
       }
     }
   }
@@ -204,6 +294,16 @@
         font-size: $fs-SM;
       }
     }
+
+    .select-rel {
+      .select-svg {
+        transform: translate(-130%, -234%);
+      }
+    }
+  }
+
+  @include tab-ver {
+    gap: 1.5rem;
   }
 
   @include mbl-LG {
@@ -238,4 +338,10 @@
   background-color: white;
   border: 1px $primary-light solid;
   color: $primary-light;
+}
+
+@include mbl-LG {
+  html {
+    height: auto;
+  }
 }

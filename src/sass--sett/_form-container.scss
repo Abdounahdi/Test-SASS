@@ -7,4 +7,9 @@
   @include tablette {
     padding: 2.5rem;
   }
+
+  @include tab-ver {
+    padding: 2.5rem;
+    padding-right: 1rem;
+  }
 }
