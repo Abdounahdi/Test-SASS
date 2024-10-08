@@ -361,8 +361,7 @@ body {
 .menu a:active {
   color: #1814f3;
 }
-.menu .colored-page-txt:link,
-.menu .colored-page-txt:visited {
+.menu .colored-page-txt:link, .menu .colored-page-txt:visited {
   color: #1814f3;
 }
 @media (max-width: 1024px) {
