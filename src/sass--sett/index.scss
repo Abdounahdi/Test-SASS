@@ -1,0 +1,347 @@
+// variables
+@import "variables";
+
+//generals
+@import "generals";
+
+// layouts
+@import "layouts";
+
+/// // MEDIA QUERRIES
+
+@import "mediaquerries";
+
+/// COMPONENTS
+
+@import "menu-nav";
+@import "main-maininner";
+
+.main-inner {
+  height: 100%;
+}
+
+@import "form-container";
+
+///////// SETTINGS MENU
+///
+
+.transactions-menu {
+  border-bottom: solid $brd-tran 1px;
+  padding: 0 1rem 0.8rem $padding;
+  overflow: hidden;
+  margin-bottom: $padding;
+
+  .tran-link:link,
+  .tran-link:visited {
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: $fs-SM + 0.1rem;
+    font-weight: 500;
+    line-height: 1.573rem;
+  }
+
+  .unchecked-link:link,
+  .unchecked-link:visited {
+    color: $heading-blue;
+  }
+
+  .unchecked-link:hover,
+  .unchecked-link:active {
+    color: $primary-light;
+  }
+
+  .checked-link:link,
+  .checked-link:visited {
+    color: $primary-light;
+  }
+
+  .checked-link {
+    position: relative;
+    .indicator {
+      position: absolute;
+      transform: translate(-9%, 23%);
+      width: 120%;
+      height: 100%;
+      background-color: $primary-light;
+      border-radius: $b-r-sm;
+    }
+  }
+
+  @include tablette {
+    .tran-link:link,
+    .tran-link:visited {
+      font-size: $fs-SM;
+    }
+  }
+
+  @include mbl-LLGG {
+    justify-content: space-between;
+  }
+
+  @include mbl-LG {
+    gap: 5rem;
+    padding-left: 1rem;
+  }
+
+  @include mbl-lg {
+    gap: 2rem;
+  }
+}
+
+.tran-small {
+  display: none;
+}
+
+@include mbl-SM {
+  .tran-large {
+    display: none;
+  }
+  .tran-small {
+    display: flex;
+
+    ion-icon {
+      height: 2rem;
+      width: 2rem;
+      color: $primary-light;
+    }
+
+    .indicator {
+      transform: translate(-14%, 11%) !important;
+      border-radius: 0.87rem !important;
+    }
+  }
+}
+
+.details-cont {
+  grid-template-columns: 12% 85%;
+  margin-bottom: $padding;
+
+  .profile-cont {
+    background: url(".././Assets/set-assets/user-face.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 14rem;
+    width: 14rem;
+
+    .profile-edit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: $primary-light;
+      transform: translate(-22%, -22%);
+    }
+
+    .edit-btn {
+      background: none;
+      border: none;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  @include tab-large {
+    .profile-cont {
+      height: 11rem;
+      width: 11rem;
+
+      .profile-edit {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  @include tab-ver {
+    .profile-cont {
+      height: 9rem;
+      width: 9rem;
+
+      .profile-edit {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  /* .profile-pic-container {
+    height: fit-content;
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .edit-pen {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-10%, 360%);
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .edit-pen-svg {
+    height: 3rem;
+    width: 3rem;
+  } */
+
+  @include tablette {
+    grid-template-columns: 15% 82%;
+    gap: 3rem;
+  }
+
+  @include tab-ver {
+    grid-template-columns: 20% 77%;
+    gap: 0.5rem;
+  }
+
+  @include mbl-LLGG {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    /* .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      max-height: 17rem;
+      img {
+        width: auto;
+      }
+    } */
+
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-cont {
+      height: 15rem;
+      width: 15rem;
+
+      .profile-edit {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+}
+
+.input-cont {
+  grid-template-columns: 1fr 1fr;
+  font-family: "Inter", sans-serif;
+
+  .input {
+    label {
+      font-size: $fs-sm;
+      font-weight: 400;
+      line-height: 1.936rem;
+      color: $black;
+    }
+
+    input,
+    select {
+      padding: $padding - 0.4rem 0 $padding - 0.4rem $padding;
+      border-radius: $b-r-av - 0.5rem;
+      outline: none;
+      border: solid 1px $brd-white;
+      font-size: $fs-sm;
+      color: $dark-pri;
+    }
+
+    input::placeholder {
+      font-size: $fs-sm - 0.1rem;
+      line-height: 1.815rem;
+      color: $heading-blue;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .select-rel {
+    position: relative;
+    .select-svg {
+      position: absolute;
+      height: 0.7rem;
+      width: 1.2rem;
+      bottom: 0;
+      right: 0;
+      transform: translate(-180%, -300%);
+    }
+  }
+
+  @include tablette {
+    gap: 2rem;
+    .input {
+      label {
+        font-size: $fs-SM;
+      }
+
+      input,
+      select {
+        padding: 1.3rem 0 1.2rem 1.5rem;
+        font-size: $fs-SM;
+      }
+
+      input::placeholder {
+        font-size: $fs-SM;
+      }
+    }
+
+    .select-rel {
+      .select-svg {
+        transform: translate(-130%, -234%);
+      }
+    }
+  }
+
+  @include tab-ver {
+    gap: 1.5rem;
+  }
+
+  @include mbl-LG {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+.save-btn {
+  padding: 1.4rem 7.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: $fs-sm;
+  font-weight: 500;
+  line-height: 1.815rem;
+  color: white;
+  background-color: $primary-light;
+  border-radius: $b-r-sm;
+  border: 1px $primary-light solid;
+  transition: all 0.3s;
+
+  @include tablette {
+    padding: 1.1rem 4.7rem;
+    font-size: $fs-sm - 0.1rem;
+  }
+
+  @include mbl-LG {
+    width: 100%;
+  }
+}
+
+.save-btn:hover {
+  background-color: white;
+  border: 1px $primary-light solid;
+  color: $primary-light;
+}
+
+@include mbl-LG {
+  html {
+    height: auto;
+  }
+}
