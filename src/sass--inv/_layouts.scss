@@ -39,3 +39,45 @@ body {
   }
 }
 
+.headings {
+  padding-bottom: $padding;
+  @include tablette {
+    padding-bottom: $padding - 0.4rem;
+  }
+
+  .heading {
+    font-size: $fs-lg;
+    font-weight: 600;
+    line-height: 2.663rem;
+    color: $dark-pri;
+  }
+
+  @include tablette {
+    .heading {
+      font-size: $fs-sm;
+    }
+  }
+  @include mbl-lg {
+    padding: 0 0 1.2rem 0;
+  }
+}
+
+.C {
+  background-color: white;
+  border-radius: $b-r-av;
+}
+
+.M-B {
+  margin-bottom: 4rem;
+  @include tablette {
+    margin-bottom: 2rem;
+  }
+}
+
+.won {
+  color: $green-expenses !important;
+}
+
+.lost {
+  color: $accent !important;
+}

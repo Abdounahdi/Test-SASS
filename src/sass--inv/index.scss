@@ -4,14 +4,265 @@
 //generals
 @import "generals";
 
-// layouts
-@import "layouts";
-
 /// // MEDIA QUERRIES
 
 @import "mediaquerries";
+
+// layouts
+@import "layouts";
 
 /// COMPONENTS
 
 @import "menu-nav";
 @import "main-maininner";
+@import "money-spendings";
+
+///////// CHARTS
+///
+
+.charts-container {
+  grid-template-columns: 1fr 1fr;
+  .chart {
+    .chart-img-container {
+      padding: 2.6rem 3rem 2.8rem 2.9rem;
+      background-color: white;
+      border-radius: $b-r-nm;
+
+      .img-lg,
+      .img-sm {
+        width: 100%;
+      }
+    }
+  }
+
+  .img-sm {
+    display: none;
+  }
+  @include tab-ver {
+    grid-template-columns: 1fr;
+  }
+
+  @include mbl {
+    .chart {
+      .chart-img-container {
+        padding: 2.6rem 3rem 2rem 2rem;
+      }
+    }
+
+    .img-lg {
+      display: none;
+    }
+
+    .img-sm {
+      display: inline;
+    }
+  }
+}
+
+///////// INVESTMENT
+///
+
+.inves-stock-section {
+  grid-template-columns: 57.2% 39.72%;
+
+  @include tablette {
+    gap: 2.5rem;
+  }
+
+  @include tab-ver {
+    grid-template-columns: 1fr;
+  }
+}
+
+.invesment-cont {
+  .inves {
+    font-family: "Inter", sans-serif;
+    padding: $padding - 0.5rem;
+    padding-right: 3.6rem;
+
+    .inves-svg {
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .inves-title {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.936rem;
+      color: $black;
+    }
+
+    .inves-type {
+      font-size: $fs-sm - 0.1rem;
+      line-height: 1.815rem;
+      color: $heading-blue;
+    }
+  }
+
+  @include lap-sm {
+    .inves {
+      padding: 2.2rem;
+      padding-right: 1.4rem;
+      .inves-svg {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+    }
+  }
+
+  @include tab---l {
+    .inves {
+      .inves-title {
+        font-size: $fs-sm - 0.2rem;
+      }
+
+      .inves-type {
+        font-size: $fs-SM + 0.1rem;
+      }
+      .inves-place {
+        gap: 1rem;
+      }
+    }
+  }
+
+  @include tab---ll {
+    .inves {
+      .inves-title {
+        font-size: $fs-SM;
+      }
+
+      .inves-type {
+        font-size: $fs-SM-sm;
+      }
+    }
+  }
+
+  @include tablette {
+    .disapear {
+      display: none;
+    }
+
+    .inves {
+      padding: 1.2rem;
+    }
+  }
+
+  @include tablet {
+    .inves {
+      .inves-money {
+        gap: 1rem;
+      }
+    }
+  }
+
+  @include tab-ver {
+    .inves {
+      padding-right: 1.5rem;
+
+      .inves-place {
+        gap: 1.2rem;
+      }
+
+      .inves-money {
+        gap: 2rem;
+      }
+
+      .inves-title {
+        font-size: $fs-SM + 0.2rem;
+      }
+
+      .inves-type {
+        font-size: $fs-SM;
+      }
+    }
+  }
+
+  @include mbl-hor {
+    .disapear-1 {
+      display: none;
+    }
+  }
+}
+
+.stock-section {
+  .stock-cont {
+    padding: 2.7rem 4rem 3.4rem 3rem;
+    font-family: "Inter", sans-serif;
+
+    .stock-tb-i {
+      font-size: $fs-sm;
+      color: $black;
+      padding-bottom: 2.8rem;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .stock-tb-h {
+      font-size: $fs-sm;
+      font-weight: 500;
+      line-height: 1.936rem;
+      color: $heading-blue;
+      border-bottom: solid 1px #f4f5f7;
+      padding: 0 0 0.8rem 0;
+    }
+    .first {
+      padding-top: 1.3rem;
+    }
+
+    .last {
+      padding: 0;
+    }
+
+    @include tab---ll {
+      padding: 1.7rem 2rem 1.9rem 1.8rem;
+
+      .stock-tb-i {
+        font-size: $fs-SM + 0.2rem;
+        padding-bottom: 3rem;
+      }
+
+      .stock-tb-h {
+        font-size: $fs-SM + 0.2rem;
+        padding-bottom: 0.8rem;
+      }
+
+      .first {
+        padding-top: 0.9rem;
+      }
+    }
+
+    @include tablette {
+      padding: 1.7rem 1.5rem 1.9rem 1.8rem;
+
+      .stock-tb-i {
+        font-size: $fs-SM;
+        padding-bottom: 2.1rem;
+      }
+
+      .stock-tb-h {
+        font-size: $fs-SM;
+        padding-bottom: 0.8rem;
+      }
+
+      .first {
+        padding-top: 0.9rem;
+      }
+      .last {
+        padding: 0;
+      }
+
+      .disapear-2 {
+        display: none;
+      }
+
+      .r-last {
+        padding: 0;
+      }
+    }
+  }
+}
+
+///////// INVESTMENT
+///

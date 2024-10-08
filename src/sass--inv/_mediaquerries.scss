@@ -1,9 +1,13 @@
 @use "sass:math";
 
 $breakpoints: (
+  "lap-sm": 1355px,
   "tab-lg": 1300px,
+  "tab---l": 1275px,
+  "tab---ll": 1157px,
   "tab-l": 1160px,
   "tablette": 1024px,
+  "tablet": 996px,
   "tab": 976px,
   "tab-sm": 902px,
   "tab-ver": 819px,
@@ -11,11 +15,30 @@ $breakpoints: (
   "mbl-LG": 510px,
   "mbl-lg": 480px,
   "mbl": 375px,
+  "mbl-s": 370px,
   "mbl-sm": 335px,
 );
 
+@mixin lap-sm {
+  @media (max-width: map-get($breakpoints, "lap-sm")) {
+    @content;
+  }
+}
+
 @mixin tab-lg {
   @media (max-width: map-get($breakpoints, "tab-lg")) {
+    @content;
+  }
+}
+
+@mixin tab---l {
+  @media (max-width: map-get($breakpoints, "tab---l")) {
+    @content;
+  }
+}
+
+@mixin tab---ll {
+  @media (max-width: map-get($breakpoints, "tab---ll")) {
     @content;
   }
 }
@@ -28,6 +51,12 @@ $breakpoints: (
 
 @mixin tablette {
   @media (max-width: map-get($breakpoints, "tablette")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, "tablet")) {
     @content;
   }
 }
@@ -74,7 +103,12 @@ $breakpoints: (
   }
 }
 
-/////////// NOT USED YET
+@mixin mbl-s {
+  @media (max-width: map-get($breakpoints, "mbl-s")) {
+    @content;
+  }
+}
+
 @mixin mbl-sm {
   @media (max-width: map-get($breakpoints, "mbl-sm")) {
     @content;
