@@ -1,0 +1,44 @@
+@use "sass:math";
+
+body {
+  grid-template-columns: 17.4% 82.6%;
+}
+
+.h {
+  height: 100%;
+}
+.w {
+  width: 100%;
+}
+
+.d-g {
+  display: grid;
+}
+
+.d-f {
+  display: flex;
+  align-items: center;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.f-start {
+  align-items: flex-start;
+}
+
+.f-end {
+  justify-content: flex-end;
+}
+
+.d-f-c {
+  display: flex;
+  flex-direction: column;
+}
+
+@for $i from 1 through 70 {
+  .g-#{$i} {
+    gap: $f * $i;
+  }
+}

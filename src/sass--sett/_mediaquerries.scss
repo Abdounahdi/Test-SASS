@@ -1,0 +1,108 @@
+@use "sass:math";
+
+$breakpoints: (
+  "lap-sm": 1355px,
+  "tab-lg": 1300px,
+  "tab---l": 1275px,
+  "tab---ll": 1157px,
+  "tab-large": 1130px,
+  "tab-l": 1160px,
+  "tablette": 1024px,
+  "tablet": 996px,
+  "tab": 976px,
+  "tab-sm": 902px,
+  "tab-ver": 819px,
+  "mbl-hor": 653px,
+  "mbl-LLGG": 555px,
+  "mbl-LG": 510px,
+  "mbl-lg": 480px,
+  "mbl": 375px,
+  "mbl-s": 370px,
+  "mbl-sm": 335px,
+  "mbl-SM": 318px,
+);
+
+@mixin tab-lg {
+  @media (max-width: map-get($breakpoints, "tab-lg")) {
+    @content;
+  }
+}
+
+@mixin tab-l {
+  @media (max-width: map-get($breakpoints, "tab-l")) {
+    @content;
+  }
+}
+
+@mixin tab-large {
+  @media (max-width: map-get($breakpoints, "tab-large")) {
+    @content;
+  }
+}
+
+@mixin tablette {
+  @media (max-width: map-get($breakpoints, "tablette")) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: map-get($breakpoints, "tab")) {
+    @content;
+  }
+}
+
+@mixin tab-ver {
+  @media (max-width: map-get($breakpoints, "tab-ver")) {
+    @content;
+  }
+}
+
+@mixin tab-sm {
+  @media (max-width: map-get($breakpoints, "tab-sm")) {
+    @content;
+  }
+}
+
+@mixin mbl-hor {
+  @media (max-width: map-get($breakpoints, "mbl-hor")) {
+    @content;
+  }
+}
+
+@mixin mbl-LLGG {
+  @media (max-width: map-get($breakpoints, "mbl-LLGG")) {
+    @content;
+  }
+}
+
+@mixin mbl-LG {
+  @media (max-width: map-get($breakpoints, "mbl-LG")) {
+    @content;
+  }
+}
+
+@mixin mbl-lg {
+  @media (max-width: map-get($breakpoints, "mbl-lg")) {
+    @content;
+  }
+}
+
+@mixin mbl {
+  @media (max-width: map-get($breakpoints, "mbl")) {
+    @content;
+  }
+}
+
+/////////// NOT USED YET
+@mixin mbl-sm {
+  @media (max-width: map-get($breakpoints, "mbl-sm")) {
+    @content;
+  }
+}
+
+@mixin mbl-SM {
+  @media (max-width: map-get($breakpoints, "mbl-SM")) {
+    @content;
+  }
+}
